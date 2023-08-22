@@ -1,0 +1,48 @@
+.caixa_comprimento {
+    height: 40vh;
+}   
+
+.card {
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.card_img{
+    width: 80%;
+    height: auto;
+    padding-bottom: 5%;
+}
+
+.button{
+    width: 80%;
+    height: auto;
+}
+
+.cx_interna{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+   
+    box-sizing: border-box;
+}
+
+/* .card{
+    display: flex;
+    height: 40vh;
+    align-items: center;
+    vertical-align: middle;
+} */
+
+/* .card_body{
+    display: flex;
+    height: 40vh;
+    align-items: center;
+    vertical-align: middle;
+} */

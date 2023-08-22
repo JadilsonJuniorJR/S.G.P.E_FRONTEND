@@ -12,26 +12,21 @@ export default function BarraLateral() {
         <Col sm={12} md={3} lg={3} className={styles.flutuar}>
           <div className={styles.menu_lateral}>
             <div className={styles.menu_lateral_caixa}>
-              <button type="button" class="btn btn-light">
+              <button type="button" className="btn btn-light">
                 Home
               </button>
             </div>
-            <button type="button" class="btn btn-light">
+            <button type="button" className="btn btn-light">
               Eventos
             </button>
           </div>
-          {/* Conteúdo da coluna */}
         </Col>
 
-        <Col sm={12} md={9} lg={6}>
+        <Col sm={12} md={9} lg={9}>
           <Routes>
-            {/* Renderização da Pasta raiz */}
             <Route path="/" element={<Principal />} />
             <Route path="/eventos" element={<Eventos />} />
-            {/* <Route path="/signin" element={<Signin />} />
-        <Route path="/signup" element={<Signup />} /> */}
           </Routes>
-          {/* Conteúdo da coluna */}
         </Col>
       </Row>
     </Container>

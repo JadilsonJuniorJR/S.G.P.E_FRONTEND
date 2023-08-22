@@ -9,7 +9,7 @@ export default function Router() {
       <Cabecalho />
       <Routes>
         {/* Renderização da Pasta raiz */}
-        <Route path="/" element={<BarraLateral />} />
+        <Route path="*" element={<BarraLateral />} />
       </Routes>
     </>
   );
