@@ -1,5 +1,4 @@
-export default function Signin(){
-    return (
-        <h1> Acessar o Sistema </h1>
-    )
-}
+export default function Eventos() {
+    return <h1> Entrar em Eventos </h1>;
+  }
+  
