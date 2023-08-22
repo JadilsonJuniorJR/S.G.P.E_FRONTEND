@@ -1,5 +1,5 @@
 export default function Signup(){
     return (
-        <h1> Cadastrar no Sistema </h1>
+        <h1> Sair do Sistema </h1>
     )
 }
