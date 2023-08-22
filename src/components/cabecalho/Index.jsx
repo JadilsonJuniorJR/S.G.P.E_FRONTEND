@@ -7,8 +7,8 @@ export default function Header() {
     <Navbar className="border">
       <Container fluid className="border">
         <Row>
-          <Col md={3} className="border">
-            {" "}
+          <Col md={3} className={styles.cx_img}>
+            
             <img className={styles.img} src={logo} alt="Img Logo" />{" "}
           </Col>
           <Col
