@@ -13,18 +13,17 @@
   justify-content: space-around;
   width: 80%;
   height: 80%;
-  border: 1px solid #FFF;
 }
 
 
-/* Sidebar.css
+/* Sidebar.css */
 @media (max-width: 768px) {
-  .sidebar {
-    display: none;
-    /* Ocultar em telas menores 
+  .caixa_interna {
+    height: 50%;
+   
   }
 }
-*/
+
 
 .largura {
   height: 40vh;
