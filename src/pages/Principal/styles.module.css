@@ -1,6 +1,7 @@
 .caixa_comprimento {
     height: 40vh;
-}   
+    padding: 0px;
+}
 
 .caixa {
     height: 40vh;
@@ -11,27 +12,27 @@
     flex-wrap: nowrap;
 }
 
-.cx_interna{
-    width: 50%;
+.cx_interna {
+    width: 60%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
-   
     box-sizing: border-box;
 }
 
-.card_img{
-    width: 80%;
-    height: auto;
+.card_img {
+    width: 50%;
     padding-bottom: 5%;
 }
 
-.button{
+.button {
     width: 80%;
     height: auto;
 }
+
+
 
 
 /* .card{

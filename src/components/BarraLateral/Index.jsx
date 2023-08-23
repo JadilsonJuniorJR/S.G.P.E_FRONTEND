@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 
@@ -13,9 +13,9 @@ export default function BarraLateral() {
       <Row>
         <Col sm={12} md={3} lg={3} className={`${styles.menu_lateral} ${'bg-dark'}`}>
           <div className={styles.caixa_interna}>
-            <Button variant="outline-light" size="lg">Home</Button>
-            <Button variant="outline-light" size="lg">Eventos</Button>
-            <Button variant="outline-light" size="lg">Sobre</Button>
+            <Link to='/'> <Button variant="outline-light" size="lg">Home</Button> </Link>
+            <Link to='/eventos'> <Button variant="outline-light" size="lg">Eventos</Button> </Link>
+            <Link to='/eventos'> <Button variant="outline-light" size="lg">Sobre</Button> </Link>
           </div>
         </Col>
 

@@ -1,4 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import styles from "./styles.module.css";
 
@@ -11,8 +12,9 @@ export default function Principal() {
                 <Col sm={12} md={6} lg={6} className={styles.caixa_comprimento}>
                     <Container className={`${styles.caixa}`}>
                         <div className={`${styles.cx_interna} ${'text-white'}`}>
-                        <img className={styles.card_img} src={logo} alt="Img Logo" />
-                         <Button variant="outline-dark" className={styles.button} >Eventos</Button> 
+                         <img className={styles.card_img} src={logo} alt="Img Logo" /> 
+                         {/* <Button variant="outline-dark" className={styles.button} > <Link to='/eventos' className={`${styles.link}`}> Eventos </Link></Button> */}
+                         <Link to='/eventos'> <Button variant="outline-dark" size="lg"> Eventos </Button>  </Link>
                         </div>
                     </Container>
                 </Col>
@@ -20,7 +22,7 @@ export default function Principal() {
                     <Container className={`${styles.caixa}`}>
                         <div className={`${styles.cx_interna} ${'text-white'}`}>
                         <img className={styles.card_img} src={logo} alt="Img Logo" />
-                         <Button variant="outline-dark" className={styles.button} >Pesquisar Usuários</Button> 
+                         <Button variant="outline-dark" size="lg" >Pesquisar Usuários</Button> 
                         </div>
                     </Container>
                 </Col>
