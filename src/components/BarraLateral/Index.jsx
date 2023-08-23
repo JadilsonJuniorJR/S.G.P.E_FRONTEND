@@ -1,5 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
+import Button from 'react-bootstrap/Button';
+
 import styles from "./styles.module.css";
 
 import Principal from "../../pages/Principal/Index";
@@ -9,16 +11,11 @@ export default function BarraLateral() {
   return (
     <Container fluid>
       <Row>
-        <Col sm={12} md={3} lg={3} className={styles.flutuar}>
-          <div className={styles.menu_lateral}>
-            <div className={styles.menu_lateral_caixa}>
-              <button type="button" className="btn btn-light">
-                Home
-              </button>
-            </div>
-            <button type="button" className="btn btn-light">
-              Eventos
-            </button>
+        <Col sm={12} md={3} lg={3} className={`${styles.menu_lateral} ${'bg-dark'}`}>
+          <div className={styles.caixa_interna}>
+            <Button variant="outline-light" size="lg">Home</Button>
+            <Button variant="outline-light" size="lg">Eventos</Button>
+            <Button variant="outline-light" size="lg">Sobre</Button>
           </div>
         </Col>
 

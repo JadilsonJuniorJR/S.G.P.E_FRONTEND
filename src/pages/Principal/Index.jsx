@@ -1,6 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
 import styles from "./styles.module.css";
 
 import logo from "../../assets/icone_evento.png"
@@ -10,28 +9,43 @@ export default function Principal() {
         <Container fluid >
             <Row>
                 <Col sm={12} md={6} lg={6} className={styles.caixa_comprimento}>
-                    <Container className={`${styles.card}`}>
+                    <Container className={`${styles.caixa}`}>
                         <div className={`${styles.cx_interna} ${'text-white'}`}>
                         <img className={styles.card_img} src={logo} alt="Img Logo" />
                          <Button variant="outline-dark" className={styles.button} >Eventos</Button> 
                         </div>
-                           
                     </Container>
                 </Col>
-                <Col sm={12} md={6} lg={6} className="border">
-                    <p> Caixa Principal 2 </p>
-                    <h1> Pagina Principal </h1>
+                <Col sm={12} md={6} lg={6} className={styles.caixa_comprimento}>
+                    <Container className={`${styles.caixa}`}>
+                        <div className={`${styles.cx_interna} ${'text-white'}`}>
+                        <img className={styles.card_img} src={logo} alt="Img Logo" />
+                         <Button variant="outline-dark" className={styles.button} >Pesquisar Usuários</Button> 
+                        </div>
+                    </Container>
                 </Col>
             </Row>
             <Row>
-                <Col sm={12} md={6} lg={6} className={styles.comprimento}>
-                    <p> Caixa Principal 3</p>
-                    <h1> Pagina Principal </h1>
+            <Col sm={12} md={6} lg={6} className={styles.caixa_comprimento}>
+                    <Container className={`${styles.caixa}`}>
+                        <div className={`${styles.cx_interna} ${'text-white'}`}>
+                        <img className={styles.card_img} src={logo} alt="Img Logo" />
+                         <Button variant="outline-dark" className={styles.button} >Eventos</Button> 
+                        </div>
+                    </Container>
                 </Col>
-                <Col sm={12} md={6} lg={6} className="border">
+                <Col sm={12} md={6} lg={6} className={styles.caixa_comprimento}>
+                    <Container className={`${styles.caixa}`}>
+                        <div className={`${styles.cx_interna} ${'text-white'}`}>
+                        <img className={styles.card_img} src={logo} alt="Img Logo" />
+                         <Button variant="outline-dark" className={styles.button} >Eventos</Button> 
+                        </div>
+                    </Container>
+                </Col>
+                {/* <Col sm={12} md={6} lg={6} className="border">
                     <p> Caixa Principal 4 </p>
                     <h1> Pagina Principal </h1>
-                </Col>
+                </Col> */}
             </Row>
         </Container>
     );

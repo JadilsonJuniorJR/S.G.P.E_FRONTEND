@@ -1,53 +1,31 @@
+.menu_lateral {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background-color: #2d045c;
+}
 
-/* Barra Lateral 1 */
-.caixa_Lateral_1 {
+.caixa_interna {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
-  padding: 3px;
-}
-
-.img {
-  width: 50%;
-}
-
-
-/* Barra Lateral 2  */
-.caixa_Lateral_2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-
-}
-
-.menu_lateral {
+  justify-content: space-around;
   width: 80%;
   height: 80%;
   border: 1px solid #FFF;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
 }
 
 
-/* Sidebar.css */
-
+/* Sidebar.css
 @media (max-width: 768px) {
   .sidebar {
     display: none;
-    /* Ocultar em telas menores */
+    /* Ocultar em telas menores 
   }
 }
+*/
 
-
-.flutuar{
-  height: 80vh;
-  background-color:black;
-}
-
-.largura{
+.largura {
   height: 40vh;
 }
