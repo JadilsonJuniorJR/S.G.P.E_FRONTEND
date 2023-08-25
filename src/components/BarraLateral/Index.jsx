@@ -6,6 +6,7 @@ import styles from "./styles.module.css";
 
 import Principal from "../../pages/Principal/Index";
 import Eventos from "../../pages/Eventos/index";
+import Login from "../../pages/Signin/Index"
 
 export default function BarraLateral() {
   return (
@@ -23,6 +24,7 @@ export default function BarraLateral() {
           <Routes>
             <Route path="/" element={<Principal />} />
             <Route path="/eventos" element={<Eventos />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
         </Col>
       </Row>
