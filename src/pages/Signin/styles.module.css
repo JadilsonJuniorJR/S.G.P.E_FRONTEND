@@ -1,0 +1,17 @@
+.alinhamento{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+}
+
+
+/* @media (min-width: 1025px) {
+    .alinhamento{
+       min-height: 10%;
+        background-color: aqua;
+        justify-content: center;
+    }
+}  */

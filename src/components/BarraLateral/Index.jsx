@@ -16,11 +16,12 @@ export default function BarraLateral() {
           <div className={styles.caixa_interna}>
             <Link to='/'> <Button variant="outline-light" size="lg">Home</Button> </Link>
             <Link to='/eventos'> <Button variant="outline-light" size="lg">Eventos</Button> </Link>
+            <Link to='/login'> <Button variant="outline-light" size="lg">Logar</Button> </Link>
             <Link to='/eventos'> <Button variant="outline-light" size="lg">Sobre</Button> </Link>
           </div>
         </Col>
 
-        <Col sm={12} md={9} lg={9}>
+        <Col sm={12} md={9} lg={9} className="p-0">
           <Routes>
             <Route path="/" element={<Principal />} />
             <Route path="/eventos" element={<Eventos />} />
