@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 import styles from "./styles.module.css";
 
 import Principal from "../../pages/Principal/Index";
-import Eventos from "../../pages/Eventos/Index";
+import Eventos from "../../pages/Eventos/index";
 
 export default function BarraLateral() {
   return (

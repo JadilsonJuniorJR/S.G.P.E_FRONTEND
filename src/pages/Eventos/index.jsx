@@ -1,11 +1,11 @@
 import { Container, Row, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-import logo from "../../assets/icone_evento.png"
+// import logo from "../../assets/icone_evento.png"
 import styles from "./styles.module.css";
 
 
