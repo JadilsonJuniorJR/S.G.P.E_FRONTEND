@@ -1,17 +1,64 @@
-.alinhamento{
+.conteiner {
     height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    flex-wrap: nowrap;
     padding: 0;
 }
 
+.linha {
+    /* <Row className="d-flex justify-content-center align-content-center bg-dark h-75 w-75"> */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 60vw;
+    height: 50vw;
+    background-color: aqua;
+    min-width: 300px;
+   
+}
 
-/* @media (min-width: 1025px) {
-    .alinhamento{
-       min-height: 10%;
-        background-color: aqua;
-        justify-content: center;
+.coluna {
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    min-width: 40vw;
+    height: 50vh;
+}
+
+
+.cartao{
+    /* shadow-2-strong w-100 */
+    width: 100%;
+    min-width: 300px;
+    background-color: blueviolet;
+}
+/* 
+@media (min-width: 320px) {
+    .conteiner {
+        height: 60vh;
+        background-color: green;
+        min-width: 320px;
     }
-}  */
+
+    .linha {
+        <Row className="d-flex justify-content-center align-content-center bg-dark h-75 w-75">
+        height: 80vw;
+        min-width: 320px;
+        background-color: red;
+    }
+
+    .cartao{
+        height: 100%;
+        min-width: 320px;
+    }
+  
+} */
