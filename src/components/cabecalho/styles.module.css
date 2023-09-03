@@ -1,3 +1,8 @@
+.menu_cabecalho{
+    background-color: #FFF;
+    border-bottom: 3px solid #F00;
+    color: #000;
+}
 
 
 .cx_img{
@@ -9,3 +14,12 @@
     width: 50%;
     /* max-width: 200px; */
 }
+
+
+@media (max-width: 425px) {
+    .h1_espaco {
+      padding-top: 10%;
+      padding-bottom: 10%;
+    }
+  }
+  

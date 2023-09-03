@@ -12,7 +12,7 @@ export default function BarraLateral() {
   return (
     <Container fluid>
       <Row>
-        <Col sm={12} md={3} lg={3} className={`${styles.menu_lateral} ${'bg-dark'}`}>
+        <Col sm={12} md={3} lg={3} className={`${styles.menu_lateral}`}>
           <div className={styles.caixa_interna}>
             <Link to='/'> <Button variant="outline-light" size="lg">Home</Button> </Link>
             <Link to='/eventos'> <Button variant="outline-light" size="lg">Eventos</Button> </Link>
@@ -20,7 +20,7 @@ export default function BarraLateral() {
             <Link to='/eventos'> <Button variant="outline-light" size="lg">Sobre</Button> </Link>
           </div>
         </Col>
-
+        {/* Itens da Barra Lateral */}
         <Col sm={12} md={9} lg={9} className="p-0">
           <Routes>
             <Route path="/" element={<Principal />} />

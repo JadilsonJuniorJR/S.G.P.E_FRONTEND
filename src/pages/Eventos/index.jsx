@@ -1,4 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
+import axios from "axios";
 // import { Link } from "react-router-dom";
 
 import Button from 'react-bootstrap/Button';
@@ -10,21 +11,34 @@ import { useState } from "react";
 
 export default function Eventos() {
 
-  const [nome_evento, setNome_Evento] = useState('');
-  const [organizador, setOrganizador] = useState('');
-  const [descricao, setDescricao] = useState('');
+  const [nome_evento, setNome_Evento] = useState([]);
+  const [organizador, setOrganizador] = useState([]);
+  const [descricao, setDescricao] = useState([]);
 
+  
   const handleSubmit = (evento) =>{
     evento.preventDefault();
     alert("clicou")
+    
   }
+
+  
+
+  // Requisição
+//  const postForm= async() =>{
+//   try{
+//       const response = await axios.get("https://jsonplaceholder.typicode.com/posts")
+//   }catch(){
+
+//   }
+//  }
 
   return (
     <Container>
       <Row>
         <Col sm={12} md={12} lg={12} className={` ${styles.caixa_comprimento}`}>
           <h2 >Criar Eventos </h2>
-          <Container fluid className={` ${styles.caixa_interna} ${'bg-dark text-white p-4'}`}>
+          <Container fluid className={` ${styles.caixa_interna} ${' p-4'}`}>
             <Form className="overflow-hidden">
 
               <Form.Group className="mb-3" controlId="formBasicNomeEvento">
@@ -48,7 +62,7 @@ export default function Eventos() {
                   onRateChange={(e) => setDescricao(e.target.value)} />
               </Form.Group>
 
-              <Button variant="primary" type="submit" onClick={handleSubmit}>
+              <Button variant="danger" type="submit" onClick={handleSubmit}>
                 Enviar
               </Button>
             </Form>

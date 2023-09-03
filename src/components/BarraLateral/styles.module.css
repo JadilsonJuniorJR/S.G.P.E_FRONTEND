@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   height: 80vh;
-  background-color: #2d045c;
+  background-color: #359830;
 }
 
 .caixa_interna {
@@ -15,16 +15,12 @@
   height: 80%;
 }
 
-
-/* Sidebar.css */
-@media (max-width: 768px) {
-  .caixa_interna {
-    height: 50%;
-   
-  }
-}
-
-
 .largura {
   height: 40vh;
+}
+
+@media (max-width: 425px) {
+  .menu_lateral {
+    height: 50vh;
+  }
 }

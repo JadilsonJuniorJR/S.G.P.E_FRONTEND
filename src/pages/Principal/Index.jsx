@@ -22,7 +22,7 @@ export default function Principal() {
                             </Nav.Link>  
                             {/* Botão para Evento  */}
                             <Link to='/eventos'> 
-                                <Button variant="outline-dark" size="lg"> Eventos </Button>  
+                                <Button variant="outline-dark" size="lg"> Criar Eventos </Button>  
                             </Link>
                         </Container>
                     </Container>
@@ -80,13 +80,3 @@ export default function Principal() {
         </Container>
     );
 }
-
-
-// <Card className={`${'card text-center border-secondary justify-content-center'} ${styles.card_comprimento}`}>
-//                         <Card.Img  variant="top" src={logo} className={`${'container d-flex align-items-center justify-content-center card-img-top'} ${styles.card_img}`} />
-//                         {/* <img className={styles.card_img} src={logo} alt="Img Logo" /> */}
-//                         <Card.Body className="d-flex flex-column" >
-                        
-//                             <Button variant="dark" >Eventos</Button>
-//                         </Card.Body>
-//                     </Card>
