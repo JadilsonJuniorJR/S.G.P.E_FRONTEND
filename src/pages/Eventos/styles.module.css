@@ -5,6 +5,7 @@
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
+    background-color: #ffffff;
 }
 
 .caixa_interna{
@@ -12,11 +13,12 @@
     background-color: #359830;
     color: #FFF;
     max-width: 768px;
-    max-height: 60%;
+    /* max-height: 80%; */
+    
 }
 
 .form_tamanho{
-    resize: none;
+    resize: both;
 }
 /* 
 @media (min-width: 1025px) {

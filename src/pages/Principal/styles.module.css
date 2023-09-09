@@ -1,6 +1,7 @@
 .caixa_comprimento {
     height: 40vh;
     padding: 0px;
+    background-color: rgb(255, 255, 255);
 }
 
 .caixa {
@@ -12,7 +13,7 @@
     flex-wrap: nowrap;
 }
 
-.cx_interna {
+/* .cx_interna {
     width: 60%;
     height: 30vh;
     display: flex;
@@ -21,11 +22,25 @@
     flex-direction: column;
     flex-wrap: wrap;
     box-sizing: border-box;
-}
+} */
 
 .card_img {
-    width: 100%;
+    width: 90%;
     padding-bottom: 5%;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+@media (max-width: 425px ) or (max-width: 768px) {
+    .card_img {
+        width: 50%;
+    }
 }
 
 

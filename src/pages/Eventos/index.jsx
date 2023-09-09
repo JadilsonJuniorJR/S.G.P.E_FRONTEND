@@ -11,14 +11,16 @@ import { useState } from "react";
 
 export default function Eventos() {
 
-  const [nome_evento, setNome_Evento] = useState([]);
-  const [organizador, setOrganizador] = useState([]);
-  const [descricao, setDescricao] = useState([]);
+  const [nome_evento, setNome_Evento] = useState('');
+  const [organizador, setOrganizador] = useState('');
+  const [descricao, setDescricao] = useState('');
 
   
   const handleSubmit = (evento) =>{
     evento.preventDefault();
     alert("clicou")
+
+    console.log(nome_evento)
     
   }
 
@@ -45,21 +47,21 @@ export default function Eventos() {
                 <Form.Label>Nome do Evento: </Form.Label>
                 <Form.Control type="text" placeholder="Digite o nome do evento:"
                   value={nome_evento}
-                  onRateChange={(e) => setNome_Evento(e.target.value)} />
+                  onChange={(e) => setNome_Evento(e.target.value)} />
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicOrganizador">
                 <Form.Label>Organizador:</Form.Label>
                 <Form.Control type="text" placeholder="Digite o nome do organizador:"
                   value={organizador}
-                  onRateChange={(e) => setOrganizador(e.target.value)} />
+                  onChange={(e) => setOrganizador(e.target.value)} />
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                 <Form.Label>Descrição:</Form.Label>
                 <Form.Control as="textarea" className={styles.form_tamanho} rows={3}
                   value={descricao}
-                  onRateChange={(e) => setDescricao(e.target.value)} />
+                  onChange={(e) => setDescricao(e.target.value)} />
               </Form.Group>
 
               <Button variant="danger" type="submit" onClick={handleSubmit}>
