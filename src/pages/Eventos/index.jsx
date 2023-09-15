@@ -1,13 +1,12 @@
 import { Container, Row, Col } from "react-bootstrap";
-import axios from "axios";
-// import { Link } from "react-router-dom";
+import axios from "axios"
 
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 // import logo from "../../assets/icone_evento.png"
 import styles from "./styles.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Eventos() {
 
@@ -15,26 +14,50 @@ export default function Eventos() {
   const [organizador, setOrganizador] = useState('');
   const [descricao, setDescricao] = useState('');
 
+
+  // const [dados, setDados] = useState({
+  //   nome_evento: '',
+  //   organizador: '',
+  //   descricao: ''
+  // })
+
+  // const handleInput = (e) => {
+  //   setDados({...dados, [e.target.name]: e.target.e })
+  //   console.log(dados)
+  // }
+
+  // const handleSubmit = (evento) => {
+  //   evento.preventDefault();
+  //   axios.post("http://localhost:3001/evento/inserir", { dados })
+  //     .then(response => console.log(response))
+  //     .catch((err) => {
+  //       console.error("ops! ocorreu um erro" + err);
+  //     });
+  //   // alert("Enviou")
+  // }
+
   
-  const handleSubmit = (evento) =>{
-    evento.preventDefault();
-    alert("clicou")
+  // const handleSubmit = (evento) => {
+  //   evento.preventDefault();
+  //   axios.post("http://localhost:3001/evento/inserir", nome_evento,organizador,descricao )
+  //     .then(response => console.log(response))
+  //     .catch((err) => {
+  //       console.error("ops! ocorreu um erro" + err);
+  //     });
+  //   // alert("Enviou")
+  // }
 
-    console.log(nome_evento)
-    
-  }
 
-  
-
-  // Requisição
-//  const postForm= async() =>{
-//   try{
-//       const response = await axios.get("https://jsonplaceholder.typicode.com/posts")
-//   }catch(){
-
-//   }
-//  }
-
+    const postData = (evento)=>{
+      evento.preventDefault();
+        axios.post("http://localhost:3001/evento/inserir", {nome_evento,organizador,descricao} )
+          .then(response => console.log(response))
+          .catch((err) => {
+            console.error("ops! ocorreu um erro" + err);
+          });
+        // alert("Enviou")
+    }
+ 
   return (
     <Container>
       <Row>
@@ -64,7 +87,7 @@ export default function Eventos() {
                   onChange={(e) => setDescricao(e.target.value)} />
               </Form.Group>
 
-              <Button variant="danger" type="submit" onClick={handleSubmit}>
+              <Button variant="danger" type="submit" onClick={postData}>
                 Enviar
               </Button>
             </Form>

@@ -10,7 +10,9 @@ import styles from "./styles.module.css";
 // Importando componentes
 import Principal from "../../pages/Principal/Index";
 import Eventos from "../../pages/Eventos/index";
-import Login from "../../pages/Signin/Index"
+import Login from "../../pages/Signin/Index";
+import Eventos_Opcoes from "../../pages/Eventos/Evento_Principal"
+import Evento_Registro from "../../pages/Eventos/Evento_Registro"
 
 export default function BarraLateral() {
   return (
@@ -27,7 +29,7 @@ export default function BarraLateral() {
             </Scroll>
             <Scroll to="Conteiner_Rotas" smooth={true} duration={150}>
               {/* Link com o Botão para a rota Eventos */}
-              <Link to='/eventos'> <Button variant="outline-light" size="lg">Eventos</Button> </Link>
+              <Link to='/Eventos_Opcoes'> <Button variant="outline-light" size="lg">Eventos</Button> </Link>
             </Scroll>
             <Link to='/login'> <Button variant="outline-light" size="lg">Logar</Button> </Link>
             <Link to='/eventos'> <Button variant="outline-light" size="lg">Sobre</Button> </Link>
@@ -42,6 +44,8 @@ export default function BarraLateral() {
               <Route path="/" element={<Principal />} />
               <Route path="/eventos" element={<Eventos />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/Eventos_Opcoes" element={<Eventos_Opcoes/>} />
+              <Route path="/Evento_Registro" element={<Evento_Registro/>} />
             </Routes>
           </Element>
         </Col>
