@@ -66,8 +66,8 @@ export default function Principal() {
                             <img className={styles.card_img} src={logo} alt="Img Logo" />
                         </Nav.Link>
                         {/* Botão para Evento  */}
-                        <Link to='/eventos'>
-                            <Button variant="outline-dark" size="lg"> Pesquisar Usuários </Button>
+                        <Link to='/Cadastrar_usuario'>
+                            <Button variant="outline-dark" size="lg"> Cadastrar Usuários em Eventos </Button>
                         </Link>
 
                     </Container>

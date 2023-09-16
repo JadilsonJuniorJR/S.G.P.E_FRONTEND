@@ -1,0 +1,26 @@
+.caixa_comprimento {
+    height: 80vh;
+    padding: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+.caixa_interna{
+    /* border-radius: 5%; */
+    background-color: #359830;
+    color: #FFF;
+    max-width: 768px;
+    /* max-height: 80%; */
+    
+}
+
+.form_tamanho{
+    resize: both;
+}
+/* 
+@media (min-width: 1025px) {
+   
+  } */

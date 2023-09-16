@@ -13,6 +13,8 @@ import Eventos from "../../pages/Eventos/index";
 import Login from "../../pages/Signin/Index";
 import Eventos_Opcoes from "../../pages/Eventos/Evento_Principal"
 import Evento_Registro from "../../pages/Eventos/Evento_Registro"
+import Cadastrar_Usuario from "../../pages/Usuarios/cadastrar_usuarios";
+
 
 export default function BarraLateral() {
   return (
@@ -46,6 +48,7 @@ export default function BarraLateral() {
               <Route path="/login" element={<Login />} />
               <Route path="/Eventos_Opcoes" element={<Eventos_Opcoes/>} />
               <Route path="/Evento_Registro" element={<Evento_Registro/>} />
+              <Route path="/Cadastrar_usuario" element={<Cadastrar_Usuario/>}/>
             </Routes>
           </Element>
         </Col>
