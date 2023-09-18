@@ -16,7 +16,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 
-import Alert from 'react-bootstrap/Alert';
 
 export default function Cadastrar_usuario() {
 
@@ -26,18 +25,10 @@ export default function Cadastrar_usuario() {
     // Utilizando navegações entre rotas
     const navigate = useNavigate()
 
-
-    const Status = () => {
-
-        <Alert variant='success'>
-            Usuario Cadastrado
-        </Alert>
-
-        
+    const notify = async () => {
+        toast.success("Enviado com Sucesso");
+        console.log("Enviou")
     }
-
-    const notify = () => toast.success("Wow so easy!");
-
     // Função para limpar campo de formulario
     const limparForm = (e) => {
         reset({
@@ -55,7 +46,6 @@ export default function Cadastrar_usuario() {
         axios.post("http://localhost:3001/participante/cadastrar", { evento })
             .then(response => {
                 console.log(response.status + "Usuario enviado")
-                Status()
                 notify()
                 // return navigate("/")
             })
@@ -70,6 +60,7 @@ export default function Cadastrar_usuario() {
         <Container fluid>
             <Row>
                 <Col sm={12} md={6} lg={12} className={` ${styles.caixa_comprimento}`}>
+                    <ToastContainer></ToastContainer>
                     <h2 >Formulário de Inscrições </h2>
                     <Container fluid className={` ${styles.caixa_interna} ${' p-4 bg-dark'}`}>
                         <Form onSubmit={handleSubmit(postData)} className="overflow-hidden">
