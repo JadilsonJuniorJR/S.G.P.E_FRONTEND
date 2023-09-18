@@ -1,12 +1,16 @@
-import { Button } from 'react-bootstrap';
+import Cabecalho from "./components/cabecalho/Index";
+import BarraLateral from "./components/BarraLateral/Index";
+
+// COMPONENTE DE REDERIZAÇÃO PRINCIPAL
 
 function App() {
   return (
-    <div className="App">
-     <h1> Pagina inicial </h1>
-     <Button>Inicar</Button>
-     
-    </div>
+    <>
+      {/* RENDERIZANDO O CABEÇALHO */}
+      <Cabecalho/>
+      {/* RENDERIZANDO A BARRA LATERAL QUE ACOPLA O MENU PRINCIPAL */}
+      <BarraLateral /> 
+    </>
   );
 }
 

@@ -1,17 +1,44 @@
 import { Container, Row, Col } from "react-bootstrap";
 import axios from "axios"
 
+
+import { useNavigate } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 import styles from "./styles.module.css";
 import { useForm } from "react-hook-form";
 
+
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+
+import Alert from 'react-bootstrap/Alert';
+
 export default function Cadastrar_usuario() {
 
     // Utilizando a biblioteca userForm
     const { register, handleSubmit, reset } = useForm();
 
+    // Utilizando navegações entre rotas
+    const navigate = useNavigate()
+
+
+    const Status = () => {
+
+        <Alert variant='success'>
+            Usuario Cadastrado
+        </Alert>
+
+        
+    }
+
+    const notify = () => toast.success("Wow so easy!");
+
+    // Função para limpar campo de formulario
     const limparForm = (e) => {
         reset({
             nome_user: '',
@@ -21,21 +48,28 @@ export default function Cadastrar_usuario() {
         })
     }
 
+
+
     const postData = (evento) => {
         console.log(evento)
         axios.post("http://localhost:3001/participante/cadastrar", { evento })
-            .then(response => console.log(response))
+            .then(response => {
+                console.log(response.status + "Usuario enviado")
+                Status()
+                notify()
+                // return navigate("/")
+            })
             .catch((err) => {
                 console.error("ops! ocorreu um erro" + err);
             });
-        
     }
 
 
+
     return (
-        <Container>
+        <Container fluid>
             <Row>
-                <Col sm={12} md={12} lg={12} className={` ${styles.caixa_comprimento}`}>
+                <Col sm={12} md={6} lg={12} className={` ${styles.caixa_comprimento}`}>
                     <h2 >Formulário de Inscrições </h2>
                     <Container fluid className={` ${styles.caixa_interna} ${' p-4 bg-dark'}`}>
                         <Form onSubmit={handleSubmit(postData)} className="overflow-hidden">
