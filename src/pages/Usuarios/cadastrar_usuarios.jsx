@@ -1,34 +1,33 @@
-import { Container, Row, Col } from "react-bootstrap";
+// IMPORTANDO BIBLIOTECAS
 import axios from "axios"
+import { Container, Row, Col } from "react-bootstrap";
 
-
+// IMPORTANDO ROTAS
 import { useNavigate } from "react-router-dom";
+
+// IMPORTANDO ELEMENTOS 
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-
-import styles from "./styles.module.css";
 import { useForm } from "react-hook-form";
+import { ErrorMessage } from "@hookform/error-message";
 
+// IMPORTANDO ESTILO
+import styles from "./styles.module.css";
 
-
+// Notificação
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 
 
 
 export default function Cadastrar_usuario() {
 
     // Utilizando a biblioteca userForm
-    const { register, handleSubmit, reset } = useForm();
+    const { register, handleSubmit, reset, formState: { errors} } = useForm();
 
     // Utilizando navegações entre rotas
     const navigate = useNavigate()
 
-    const notify = async () => {
-        toast.success("Enviado com Sucesso");
-        console.log("Enviou")
-    }
     // Função para limpar campo de formulario
     const limparForm = (e) => {
         reset({
@@ -41,13 +40,21 @@ export default function Cadastrar_usuario() {
 
 
 
-    const postData = (evento) => {
+    const postData = async (evento) => {
         console.log(evento)
-        axios.post("http://localhost:3001/participante/cadastrar", { evento })
+        await toast.promise(
+            axios.post("http://localhost:3001/participante/cadastrar", { evento }), {
+            pending: 'Enviando ....',
+            success: 'Cadastro Registrado',
+            error: 'Cadastro não Registrado'
+        })
             .then(response => {
                 console.log(response.status + "Usuario enviado")
-                notify()
-                // return navigate("/")
+                // notify()
+
+                setTimeout(() => { return navigate("/") }, 5000)
+
+
             })
             .catch((err) => {
                 console.error("ops! ocorreu um erro" + err);
@@ -59,7 +66,7 @@ export default function Cadastrar_usuario() {
     return (
         <Container fluid>
             <Row>
-                <Col sm={12} md={6} lg={12} className={` ${styles.caixa_comprimento}`}>
+                <Col sm={12} md={12} lg={12} className={` ${styles.caixa_comprimento}`}>
                     <ToastContainer></ToastContainer>
                     <h2 >Formulário de Inscrições </h2>
                     <Container fluid className={` ${styles.caixa_interna} ${' p-4 bg-dark'}`}>
@@ -74,9 +81,15 @@ export default function Cadastrar_usuario() {
 
                             <Form.Group className="mb-3" controlId="matricula_user">
                                 <Form.Label>Matrícula:</Form.Label>
-                                <Form.Control as='input' type="number" placeholder="Digite a sua matrícula:"
-                                    {...register('matricula')} />
+                                <Form.Control as='input' type="number" placeholder="Digite a sua matrícula:" required
+                                    {...register('matricula', { required: 'Preenchimento Obrigatorio !', maxLength: 10 })} />
                             </Form.Group>
+                            <ErrorMessage
+                                errors={errors}
+                                name="matricula_user"
+                                
+                            />
+
 
                             <Form.Group className="mb-3" controlId="curso_user">
                                 <Form.Label>Curso:</Form.Label>
