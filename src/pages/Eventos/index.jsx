@@ -34,8 +34,13 @@ export default function Eventos() {
   const limparForm = (e) => {
     reset({
       nome_evento: '',
-      organizador: '',
-      descricao: '',
+      // organizador: '',
+      data_inicio: '',
+      hora_inicio: '',
+      data_termino: '',
+      hora_termino: '',
+      tolerancia: '',
+      descricao: ''
     })
   }
 
@@ -64,23 +69,57 @@ export default function Eventos() {
       <Row>
         <Col sm={12} md={12} lg={12} className={` ${styles.caixa_comprimento}`}>
           <ToastContainer></ToastContainer>
-          <h2 >Criar Eventos </h2>
-          <Container fluid className={` ${styles.caixa_interna} ${' p-4 bg-dark'}`}>
+          <h2 className="mt-5">Criar Eventos </h2>
+          <Container fluid className={` ${styles.caixa_interna} ${' mt-5 p-4 bg-dark rounded'}`}>
 
             <Form onSubmit={handleSubmit(postData)} className="overflow-hidden">
+              <Row >
+                <Form.Group as={Col} className="mb-3" controlId="nome_evento">
+                  <Form.Label>Nome do Evento: </Form.Label>
+                  <Form.Control as='input' type="text" placeholder="Digite o nome do Evento:"
+                    {...register('nome_evento')}
+                  />
+                </Form.Group>
+              </Row>
 
-              <Form.Group className="mb-3" controlId="nome_evento">
-                <Form.Label>Nome do Evento: </Form.Label>
-                <Form.Control as='input' type="text" placeholder="Digite o nome do Evento:"
-                  {...register('nome_evento')}
-                />
-              </Form.Group>
+              <Row>
+                <Form.Group as={Col} className="mb-3" controlId="descricao">
+                  <Form.Label>Data do Inicio:</Form.Label>
 
-              <Form.Group className="mb-3" controlId="organizador">
-                <Form.Label>Organizador:</Form.Label>
-                <Form.Control as='input' type="text" placeholder="Digite o nome do Organizador:"
-                  {...register('organizador')} />
-              </Form.Group>
+                  <Form.Control as='input' type="date"
+                    {...register('data_inicio')} />
+                </Form.Group>
+
+                <Form.Group as={Col} controlId="formGridState">
+                  <Form.Label>Hora inicial </Form.Label>
+                  <Form.Control as='input' type="time"
+                    {...register('hora_inicio')} />
+                </Form.Group>
+
+              </Row>
+
+              <Row >
+                <Form.Group as={Col} className="mb-3" controlId="descricao">
+                  <Form.Label>Data do Termino :</Form.Label>
+
+                  <Form.Control as='input' type="date"
+                    {...register('data_termino')} />
+                </Form.Group>
+
+                <Form.Group as={Col} controlId="formGridState">
+                  <Form.Label>Hora do Termino </Form.Label>
+                  <Form.Control as='input' type="time"
+                    {...register('hora_termino')} />
+                </Form.Group>
+
+              </Row>
+              <Row>
+                <Form.Group as={Col} sm={6} md={6} lg={6} controlId="formGridState">
+                  <Form.Label>Tolerância </Form.Label>
+                  <Form.Control as='input' type="time"
+                    {...register('tolerancia')} />
+                </Form.Group>
+              </Row>
 
               <Form.Group className="mb-3" controlId="descricao">
                 <Form.Label>Descrição do Evento:</Form.Label>
@@ -88,7 +127,7 @@ export default function Eventos() {
                   {...register('descricao')} />
               </Form.Group>
 
-              <Button variant="danger" type="submit" >
+              <Button variant="danger" type="submit" className="me-2" >
                 Enviar
               </Button>
               <Button variant="primary" type="button"
@@ -100,7 +139,6 @@ export default function Eventos() {
 
         </Col>
       </Row>
-
     </Container>
 
   )
