@@ -13,7 +13,7 @@ export default function Principal() {
         <Container fluid >
             {/* Linha superior  */}
             <Row >
-                <Col sm={12} md={6} lg={6} className={`${styles.caixa_comprimento} `} >
+                <Col sm={12} md={6} lg={4} className={`${styles.caixa_comprimento} `} >
                     <Container className={`${styles.caixa} `}>
 
                         {/* Icone com Link */}
@@ -22,12 +22,12 @@ export default function Principal() {
                         </Link>
                         {/* Botão para Evento  */}
                         <Link to='/eventos'>
-                            <Button variant="outline-dark" size="lg"> Criar Eventos </Button>
+                            <Button variant="outline-dark" className={`${styles.botao} `} size="lg"> Criar Eventos </Button>
                         </Link>
 
                     </Container>
                 </Col>
-                <Col sm={12} md={6} lg={6} className={styles.caixa_comprimento}>
+                <Col sm={12} md={6} lg={4} className={styles.caixa_comprimento}>
                     <Container className={`${styles.caixa}`}>
 
                         {/* Icone com Link */}
@@ -36,15 +36,14 @@ export default function Principal() {
                         </Link>
                         {/* Botão para Pesquisar Usuario  */}
                         <Link to='/eventos'>
-                            <Button variant="outline-dark" size="lg"> Pesquisar Usuários </Button>
+                            <Button variant="outline-dark"  className={`${styles.botao} `} size="lg"> Pesquisar Usuários </Button>
                         </Link>
-
+                        
                     </Container>
                 </Col>
-            </Row>
-            {/* Linha Infeiror  */}
-            <Row>
-                <Col sm={12} md={6} lg={6} className={styles.caixa_comprimento}>
+
+
+                <Col sm={12} md={6} lg={4} className={styles.caixa_comprimento}>
                     <Container className={`${styles.caixa}`}>
 
                         {/* Icone com Link */}
@@ -53,12 +52,12 @@ export default function Principal() {
                         </Nav.Link>
                         {/* Botão para Evento  */}
                         <Link to='/Eventos_Opcoes'>
-                            <Button variant="outline-dark" size="lg"> Eventos Opçoes </Button>
+                            <Button variant="outline-dark"  className={`${styles.botao} `} size="lg"> Eventos Opçoes </Button>
                         </Link>
 
                     </Container>
                 </Col>
-                <Col sm={12} md={6} lg={6} className={styles.caixa_comprimento}>
+                <Col sm={12} md={6} lg={4} className={styles.caixa_comprimento}>
                     <Container className={`${styles.caixa}`}>
 
                         {/* Icone com Link */}
@@ -67,11 +66,15 @@ export default function Principal() {
                         </Nav.Link>
                         {/* Botão para Evento  */}
                         <Link to='/Cadastrar_usuario'>
-                            <Button variant="outline-dark" size="lg"> Cadastrar Usuários em Eventos </Button>
+                            <Button variant="outline-dark" className={`${styles.botao} `} size="lg"> Cadastrar Usuários em Eventos </Button>
                         </Link>
 
                     </Container>
                 </Col>
+            </Row>
+            {/* Linha Infeiror  */}
+            <Row>
+                
                 {/* <Col sm={12} md={6} lg={6} className="border">
                     <p> Caixa Principal 4 </p>
                     <h1> Pagina Principal </h1>

@@ -1,17 +1,25 @@
 .caixa_comprimento {
-    height: 40vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 41.6vh;
     padding: 0px;
     background-color: rgb(255, 255, 255);
 }
 
 .caixa {
-    height: 40vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     flex-wrap: nowrap;
+    height: 10vh;
 }
+
+.botao{
+    width: 200px;
+  }
 
 /* .cx_interna {
     width: 60%;
@@ -25,7 +33,7 @@
 } */
 
 .card_img {
-    width: 90%;
+    width: 50%;
     padding-bottom: 5%;
 }
 
@@ -37,10 +45,24 @@
     flex-wrap: nowrap;
 }
 
-@media (max-width: 425px ) or (max-width: 768px) {
+/* @media (max-width: 425px ) or (max-width: 768px) or (max-width: 1024px)  {
     .card_img {
         width: 50%;
     }
+} */
+
+
+@media (max-width: 425px) {
+    .caixa_comprimento {
+        height: 20vh;
+        padding: 0px;
+    }
+    .caixa {
+        height: 20vh;
+    }
+    /* botao{
+        width: 100px;
+      } */
 }
 
 

@@ -2,6 +2,9 @@ import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import styles from './styles.module.css'
+
+import { Link } from "react-router-dom";
+
 export default function Signin() {
     return (
         <div>
@@ -19,9 +22,10 @@ export default function Signin() {
                                 <FloatingLabel controlId="floatingPassword" label="Senha" className="mb-5">
                                     <Form.Control type="password" placeholder="Password" />
                                 </FloatingLabel>
-
-                                <Button variant="dark" size="md" className=" btn-block" type="submit">Login</Button>
-
+                                <Link to='/inicio'>
+                                    <Button variant="dark" size="md" className=" btn-block" type="submit">Login</Button>
+                                </Link>
+                
                             </Card.Body>
                         </Card>
                     </Col>

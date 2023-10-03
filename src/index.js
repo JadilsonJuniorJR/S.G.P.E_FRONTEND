@@ -17,34 +17,38 @@ import Cadastrar_usuario from './pages/Usuarios/cadastrar_usuarios.jsx';
 
 
 // CONJUNTO DE ROTAS DO SITE
-const router = createBrowserRouter([
+const rotas = createBrowserRouter([
   {
-    path: "/",
-    // element: <Principal/>
+    path:'/',
+    element:<Login />
+  },
+  {
+    path: "/inicio",
+    // element: <inicio/>
     element: <App />,
     children: [
       {
-        path: "/",
+        path: "/inicio",
         element: <Principal />
       },
       {
-        path: "/eventos",
+        path: "/inicio/eventos",
         element: <Eventos />
       },
       {
-        path: "/login",
+        path: "/inicio/login",
         element: <Login />
       },
       {
-        path: "/Eventos_Opcoes",
+        path: "/inicio/Eventos_Opcoes",
         element: <Eventos_Opcoes />
       },
       {
-        path: "/Evento_Registro",
+        path: "/inicio/Evento_Registro",
         element: <Evento_Registro />
       },
       {
-        path: "/Cadastrar_usuario",
+        path: "/inicio/Cadastrar_usuario",
         element: <Cadastrar_usuario />
       }
     ]
@@ -56,7 +60,7 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <RouterProvider router={rotas} />
   </React.StrictMode>
 );
 
