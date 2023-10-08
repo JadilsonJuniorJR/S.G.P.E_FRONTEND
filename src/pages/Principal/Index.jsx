@@ -5,46 +5,60 @@ import Button from 'react-bootstrap/Button';
 import styles from "./styles.module.css";
 
 import logo from "../../assets/icone_evento.png"
-import icone_evento from "../../assets/calendario.png"
+import icone_evento from "../../assets/evento_criar.png"
 import icone_usuario from "../../assets/pesquisar_usuario.png"
+import icone_evento_opcoes from "../../assets/evento_opcoes.jpg"
 
 export default function Principal() {
     return (
-        <Container fluid >
+        <Container  >
             {/* Linha superior  */}
             <Row >
-                <Col sm={12} md={6} lg={6} className={`${styles.caixa_comprimento} `} >
+                <Col sm={12} md={6} lg={4} className={`${styles.caixa_secundaria} `} >
                     <Container className={`${styles.caixa} `}>
 
                         {/* Icone com Link */}
-                        <Link as={Link} to="/eventos" className={`${styles.links}`} >
+                        <Link as={Link} to="/inicio/eventos" className={`${styles.links}`} >
                             <img className={styles.card_img} src={icone_evento} alt="Icones de Criar Eventos" />
                         </Link>
                         {/* Botão para Evento  */}
-                        <Link to='/eventos'>
-                            <Button variant="outline-dark" size="lg"> Criar Eventos </Button>
+                        <Link to='/inicio/eventos'>
+                            <Button variant="outline-dark" className={`${styles.botao} `} size="lg"> Criar Eventos </Button>
                         </Link>
 
                     </Container>
                 </Col>
-                <Col sm={12} md={6} lg={6} className={styles.caixa_comprimento}>
+                <Col sm={12} md={6} lg={4} className={styles.caixa_secundaria}>
                     <Container className={`${styles.caixa}`}>
 
                         {/* Icone com Link */}
-                        <Link to="/#" className={`${styles.links}`} >
+                        <Link to="#" className={`${styles.links}`} >
                             <img className={styles.card_img} src={icone_usuario} alt="Img Logo" />
                         </Link>
                         {/* Botão para Pesquisar Usuario  */}
-                        <Link to='/eventos'>
-                            <Button variant="outline-dark" size="lg"> Pesquisar Usuários </Button>
+                        <Link to='#'>
+                            <Button variant="outline-dark"  className={`${styles.botao} `} size="lg"> Pesquisar Usuários </Button>
+                        </Link>
+                        
+                    </Container>
+                </Col>
+
+
+                <Col sm={12} md={6} lg={4} className={styles.caixa_secundaria}>
+                    <Container className={`${styles.caixa}`}>
+
+                        {/* Icone com Link */}
+                        <Link as={Link} to="/inicio/Eventos_Opcoes" className={`${styles.links}`} >
+                            <img className={styles.card_img} src={icone_evento_opcoes} alt="Img Logo" />
+                        </Link>
+                        {/* Botão para Evento  */}
+                        <Link to='/inicio/Eventos_Opcoes'>
+                            <Button variant="outline-dark"  className={`${styles.botao} `} size="lg"> Eventos Opçoes </Button>
                         </Link>
 
                     </Container>
                 </Col>
-            </Row>
-            {/* Linha Infeiror  */}
-            <Row>
-                <Col sm={12} md={6} lg={6} className={styles.caixa_comprimento}>
+                <Col sm={12} md={6} lg={4} className={styles.caixa_secundaria}>
                     <Container className={`${styles.caixa}`}>
 
                         {/* Icone com Link */}
@@ -52,30 +66,12 @@ export default function Principal() {
                             <img className={styles.card_img} src={logo} alt="Img Logo" />
                         </Nav.Link>
                         {/* Botão para Evento  */}
-                        <Link to='/Eventos_Opcoes'>
-                            <Button variant="outline-dark" size="lg"> Eventos Opçoes </Button>
+                        <Link to='/inicio/Cadastrar_usuario'>
+                            <Button variant="outline-dark" className={`${styles.botao} `} size="lg"> Cadastrar Usuários em Eventos </Button>
                         </Link>
 
                     </Container>
                 </Col>
-                <Col sm={12} md={6} lg={6} className={styles.caixa_comprimento}>
-                    <Container className={`${styles.caixa}`}>
-
-                        {/* Icone com Link */}
-                        <Nav.Link as={Link} to="/#" className="d-flex flex-column justify-content-center align-items-center" >
-                            <img className={styles.card_img} src={logo} alt="Img Logo" />
-                        </Nav.Link>
-                        {/* Botão para Evento  */}
-                        <Link to='/Cadastrar_usuario'>
-                            <Button variant="outline-dark" size="lg"> Cadastrar Usuários em Eventos </Button>
-                        </Link>
-
-                    </Container>
-                </Col>
-                {/* <Col sm={12} md={6} lg={6} className="border">
-                    <p> Caixa Principal 4 </p>
-                    <h1> Pagina Principal </h1>
-                </Col> */}
             </Row>
         </Container>
     );

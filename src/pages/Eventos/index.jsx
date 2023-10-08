@@ -65,14 +65,13 @@ export default function Eventos() {
 
 
   return (
-    <Container fluid>
+    <Container  >
       <Row>
-        <Col sm={12} md={12} lg={12} className={` ${styles.caixa_comprimento}`}>
+        <Col sm={12} md={12} lg={12} className={` ${styles.caixa_formulario}`}>
           <ToastContainer></ToastContainer>
-          <h2 className="mt-5">Criar Eventos </h2>
-          <Container fluid className={` ${styles.caixa_interna} ${' mt-5 p-4 bg-dark rounded'}`}>
-
-            <Form onSubmit={handleSubmit(postData)} className="overflow-hidden">
+          <h2 className="mt-5 mb-5">Criar Eventos </h2>
+          <Container fluid className={` ${styles.caixa_interna} ${'  p-4 bg-dark rounded'}`}>
+            <Form onSubmit={handleSubmit(postData)} >
               <Row >
                 <Form.Group as={Col} className="mb-3" controlId="nome_evento">
                   <Form.Label>Nome do Evento: </Form.Label>

@@ -23,18 +23,18 @@ export default function BarraLateral() {
             {/* Funcionalidade de Scroll ao ser clicado direcionando as rotas. */}
             <Scroll to="Conteiner_Rotas" smooth={true} duration={150} >
               {/* Link com o Botão para a rota principal */}
-              <Link to='/'> <Button variant="outline-light" size="lg">Home</Button> </Link>
+              <Link to='/inicio'> <Button variant="outline-light" className={`${styles.botao}`}  size="lg">Home</Button> </Link>
             </Scroll>
             <Scroll to="Conteiner_Rotas" smooth={true} duration={150}>
               {/* Link com o Botão para a rota Eventos */}
-              <Link to='/Eventos_Opcoes'> <Button variant="outline-light" size="lg">Eventos</Button> </Link>
+              <Link to='/inicio/Eventos_Opcoes'> <Button variant="outline-light" className={`${styles.botao}`} size="lg">Eventos</Button> </Link>
             </Scroll>
-            <Link to='/login'> <Button variant="outline-light" size="lg">Logar</Button> </Link>
-            <Link to='/eventos'> <Button variant="outline-light" size="lg">Sobre</Button> </Link>
+            <Link to='/'> <Button variant="outline-light" className={`${styles.botao}`} size="lg">Deslogar</Button> </Link>
+            <Link to='#'> <Button variant="outline-light" className={`${styles.botao}`} size="lg">Sobre</Button> </Link>
           </div>
         </Col>
         {/* SEGUNDA COLUNA DA BARRA LATERAL, LOCAL ONDE É RENDERIZADO OS COMPONENTES */}
-        <Col sm={12} md={9} lg={9} className={`${'p-3'}`} >
+        <Col sm={12} md={9} lg={9} className={`${styles.caixa_principal}`} >
           {/* Elemento necessaria para a indicação do Scroll(Decer suavimente para o componente selecionado) */}
           <Element name="Conteiner_Rotas">
             {/* Local onde é renderizado as rotas indicadas em INDEX.js */}

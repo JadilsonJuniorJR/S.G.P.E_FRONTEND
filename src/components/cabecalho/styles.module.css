@@ -2,8 +2,14 @@
     background-color: #FFF;
     border-bottom: 3px solid #F00;
     color: #000;
+    height: 25vh;
 }
 
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .cx_img{
     display: flex;
@@ -11,15 +17,26 @@
 }
 
 .img{
-    width: 50%;
+    width: 35%;
     /* max-width: 200px; */
 }
 
+.inicio:hover{
+    cursor: pointer;
+}
 
 @media (max-width: 425px) {
-    .h1_espaco {
-      padding-top: 10%;
-      padding-bottom: 10%;
+    .img{
+        width: 25%;
+        /* max-width: 200px; */
+    }
+
+    .menu_cabecalho{
+        height: 40vh;
+    }
+
+    .titulo{
+        margin-top: 5%;
     }
   }
   

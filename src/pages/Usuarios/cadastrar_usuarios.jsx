@@ -62,13 +62,13 @@ export default function Cadastrar_usuario() {
     }
 
 
-
+    
     return (
-        <Container fluid>
+        <Container className={` ${styles.caixa_principal}`}>
             <Row>
                 <Col sm={12} md={12} lg={12} className={` ${styles.caixa_comprimento}`}>
                     <ToastContainer></ToastContainer>
-                    <h2 >Formulário de Inscrições </h2>
+                    <h2 className="mt-5 mb-5" >Formulário de Inscrições </h2>
                     <Container fluid className={` ${styles.caixa_interna} ${' p-4 bg-dark'}`}>
                         <Form onSubmit={handleSubmit(postData)} className="overflow-hidden">
 
@@ -103,7 +103,7 @@ export default function Cadastrar_usuario() {
                                     {...register('email')} />
                             </Form.Group>
 
-                            <Button variant="danger" type="submit" >
+                            <Button variant="danger" type="submit" className="me-2" >
                                 Enviar
                             </Button>
                             <Button variant="primary" type="button"

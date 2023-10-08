@@ -1,8 +1,9 @@
 .caixa_comprimento {
-    height: 80vh;
+    height: 70vh;
+    width: 60vw;
     padding: 0px;
     display: flex;
-    justify-content: space-evenly;
+    
     align-items: center;
     flex-direction: column;
     background-color: #ffffff;
@@ -20,7 +21,9 @@
 .form_tamanho{
     resize: both;
 }
-/* 
-@media (min-width: 1025px) {
-   
-  } */
+
+@media (max-width: 425px) {
+    .caixa_comprimento {
+        width: 90vw;
+    }
+} 

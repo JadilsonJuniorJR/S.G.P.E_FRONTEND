@@ -2,7 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: auto; 
+  min-height: 75vh;
   background-color: #359830;
 }
 
@@ -10,17 +11,37 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content:space-around;
   width: 80%;
-  height: 80%;
+  height: 40%;
 }
 
-.largura {
-  height: 40vh;
+
+.botao{
+  width: 120px;
+  margin: 10px;
 }
+
+
+.caixa_principal{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  margin: 0px;
+}
+
 
 @media (max-width: 425px) {
   .menu_lateral {
-    height: 50vh;
+    /* height: 60vh; */
+    min-height: 60vh;
+    flex-wrap: nowrap;
+  }
+  .caixa_interna {
+    width: 60%;
+    height: 80%;
+    flex-wrap: wrap;
+    flex-direction: row;
   }
 }

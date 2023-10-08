@@ -1,31 +1,27 @@
-.caixa_comprimento {
-    height: 40vh;
+.caixa_secundaria {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
     padding: 0px;
-    background-color: rgb(255, 255, 255);
 }
 
 .caixa {
-    height: 40vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     flex-wrap: nowrap;
+    height: 100%;
 }
 
-/* .cx_interna {
-    width: 60%;
-    height: 30vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-} */
+.botao {
+    width: 200px;
+}
 
 .card_img {
-    width: 90%;
+    width: 50%;
     padding-bottom: 5%;
 }
 
@@ -37,23 +33,23 @@
     flex-wrap: nowrap;
 }
 
-@media (max-width: 425px ) or (max-width: 768px) {
-    .card_img {
-        width: 50%;
+
+@media (max-width: 425px) {
+    .caixa_secundaria {
+        height: 20vh;
     }
+
+    .caixa {
+        height: 20vh;
+        justify-content: center;
+        flex-direction:row;
+        flex-wrap: nowrap;
+    }
+
+    .card_img {
+        width: 45%;
+       
+    }
+
+
 }
-
-
-/* .card{
-    display: flex;
-    height: 40vh;
-    align-items: center;
-    vertical-align: middle;
-} */
-
-/* .card_body{
-    display: flex;
-    height: 40vh;
-    align-items: center;
-    vertical-align: middle;
-} */

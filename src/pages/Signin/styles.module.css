@@ -1,10 +1,9 @@
 .conteiner {
-    height: 80vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    flex-wrap: nowrap;
     padding: 0;
 }
 
@@ -14,24 +13,20 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    flex-wrap: nowrap;
-    width: 60vw;
-    height: 50vw;
-    background-color: aqua;
-    min-width: 300px;
-   
+    width: 60%;
+    height: 60%;  
+    min-width: 400px;
+    max-width: 500px;
+    border-radius: 5px;
 }
 
 .coluna {
-    width: 50vw;
-    height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    flex-wrap: nowrap;
-    min-width: 40vw;
-    height: 50vh;
+    min-width: 400px;
+    max-width: 500px;
 }
 
 
@@ -39,7 +34,8 @@
     /* shadow-2-strong w-100 */
     width: 100%;
     min-width: 300px;
-    background-color: blueviolet;
+    max-width: 400px;
+    /* background-color: blueviolet; */
 }
 /* 
 @media (min-width: 320px) {
