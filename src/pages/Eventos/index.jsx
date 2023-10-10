@@ -48,7 +48,7 @@ export default function Eventos() {
   const postData = async (evento) => {
     console.log(evento)
     await toast.promise(
-      axios.post("http://localhost:3001/evento/inserir", { evento }), {
+      axios.post("http://localhost:8080/evento/cadastrar_evento", { evento }), {
       pending: 'Enviando ....',
       success: 'Evento Registrado',
       error: 'Evento não Registrado'
@@ -56,7 +56,7 @@ export default function Eventos() {
       .then(response => {
         console.log(response.status + " Evento enviado")
         // REALIZANDO ESPERA PARA REDIRECIONAMENTO DE PAGINA
-        setTimeout(() => { return navigate("/") }, 5000)
+        setTimeout(() => { return navigate("/inicio") }, 5000)
       })
       .catch((err) => {
         console.error("ops! ocorreu um erro" + err);
@@ -114,8 +114,8 @@ export default function Eventos() {
               </Row>
               <Row>
                 <Form.Group as={Col} sm={6} md={6} lg={6} controlId="formGridState">
-                  <Form.Label>Tolerância </Form.Label>
-                  <Form.Control as='input' type="time"
+                  <Form.Label>Tolerância (min.) </Form.Label>
+                  <Form.Control as='input' type="number"
                     {...register('tolerancia')} />
                 </Form.Group>
               </Row>

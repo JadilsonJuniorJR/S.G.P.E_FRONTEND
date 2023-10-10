@@ -23,7 +23,7 @@ import 'react-toastify/dist/ReactToastify.css';
 export default function Cadastrar_usuario() {
 
     // Utilizando a biblioteca userForm
-    const { register, handleSubmit, reset, formState: { errors} } = useForm();
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
     // Utilizando navegações entre rotas
     const navigate = useNavigate()
@@ -34,6 +34,7 @@ export default function Cadastrar_usuario() {
             nome_user: '',
             matricula: '',
             curso: '',
+            campus:'',
             email: ''
         })
     }
@@ -62,7 +63,7 @@ export default function Cadastrar_usuario() {
     }
 
 
-    
+
     return (
         <Container className={` ${styles.caixa_principal}`}>
             <Row>
@@ -87,7 +88,7 @@ export default function Cadastrar_usuario() {
                             <ErrorMessage
                                 errors={errors}
                                 name="matricula_user"
-                                
+
                             />
 
 
@@ -95,6 +96,12 @@ export default function Cadastrar_usuario() {
                                 <Form.Label>Curso:</Form.Label>
                                 <Form.Control as='input' type="text" placeholder="Digite o seu curso:"
                                     {...register('curso')} />
+                            </Form.Group>
+
+                            <Form.Group className="mb-3" controlId="campus_user">
+                                <Form.Label>Campus:</Form.Label>
+                                <Form.Control as='input' type="text" placeholder="Digite o seu Campus:"
+                                    {...register('campus')} />
                             </Form.Group>
 
                             <Form.Group className="mb-3" controlId="email_user">
