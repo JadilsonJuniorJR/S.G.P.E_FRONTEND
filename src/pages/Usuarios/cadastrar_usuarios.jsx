@@ -34,7 +34,7 @@ export default function Cadastrar_usuario() {
             nome_user: '',
             matricula: '',
             curso: '',
-            campus:'',
+            campus: '',
             email: ''
         })
     }
@@ -65,9 +65,9 @@ export default function Cadastrar_usuario() {
 
 
     return (
-        <Container className={` ${styles.caixa_principal}`}>
+        <Container>
             <Row>
-                <Col sm={12} md={12} lg={12} className={` ${styles.caixa_comprimento}`}>
+                <Col sm={12} md={12} lg={12} className={` ${styles.caixa_secundaria}`}>
                     <ToastContainer></ToastContainer>
                     <h2 className="mt-5 mb-5" >Formulário de Inscrições </h2>
                     <Container fluid className={` ${styles.caixa_interna} ${' p-4 bg-dark'}`}>

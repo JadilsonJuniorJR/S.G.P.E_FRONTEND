@@ -1,9 +1,8 @@
-.caixa_comprimento {
-    height: 70vh;
+.caixa_secundaria {
+    height: 100vh;
     width: 60vw;
     padding: 0px;
     display: flex;
-    
     align-items: center;
     flex-direction: column;
     background-color: #ffffff;
@@ -23,7 +22,7 @@
 }
 
 @media (max-width: 425px) {
-    .caixa_comprimento {
+    .caixa_secundaria {
         width: 90vw;
     }
 } 

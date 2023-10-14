@@ -1,5 +1,6 @@
 .conteiner {
     height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,16 +8,16 @@
     padding: 0;
 }
 
-.linha {
-    /* <Row className="d-flex justify-content-center align-content-center bg-dark h-75 w-75"> */
+.caixa {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 60%;
-    height: 60%;  
+    width: 70vw;
+    height: 80vh;
     min-width: 400px;
     max-width: 500px;
+    max-height: 500px;
     border-radius: 5px;
 }
 
@@ -30,31 +31,29 @@
 }
 
 
-.cartao{
+.cartao {
     /* shadow-2-strong w-100 */
     width: 100%;
-    min-width: 300px;
+    /* min-width: 300px; */
     max-width: 400px;
-    /* background-color: blueviolet; */
 }
-/* 
-@media (min-width: 320px) {
+
+@media (max-width: 425px) {
     .conteiner {
-        height: 60vh;
-        background-color: green;
-        min-width: 320px;
+        width: 100%;
+        border: 1px solid #F00;
     }
 
-    .linha {
-        <Row className="d-flex justify-content-center align-content-center bg-dark h-75 w-75">
-        height: 80vw;
-        min-width: 320px;
-        background-color: red;
+    .caixa {
+        min-width: 90vw;
     }
 
-    .cartao{
-        height: 100%;
-        min-width: 320px;
+    .coluna {
+        min-width: 70vw;
     }
-  
-} */
+
+    .cartao {
+        width: 320px;
+    }
+
+}

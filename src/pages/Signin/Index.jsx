@@ -49,34 +49,34 @@ export default function Signin() {
 
 
     return (
-        <div>
-            <Container className={styles.conteiner}>
-                <Row className={`${styles.linha} ${'bg-dark'}`}>
-                    <Col sm={12} md={8} lg={6} xl={5} className={styles.coluna}>
-                        <Card className={`${styles.cartao}`}  >
-                            <Card.Body className=" p-5 text-center">
 
-                                <h3 className="mb-5">Login</h3>
-                                <FloatingLabel controlId="floatingInput" label="E-mail" className="mb-3">
-                                    <Form.Control as='input' type="email" placeholder="name@example.com"
-                                        {...register('email_user')}
-                                    />
-                                </FloatingLabel>
+        <Container className={styles.conteiner}>
+            <Row className={`${styles.caixa} ${'bg-dark'}`}>
+                <Col sm={12} md={8} lg={6} xl={5} className={styles.coluna}>
+                    <Card className={`${styles.cartao}`}  >
+                        <Card.Body className=" p-5 text-center">
 
-                                <FloatingLabel controlId="floatingPassword" label="Senha" className="mb-5">
-                                    <Form.Control type="password" placeholder="Password"
-                                        {...register('senha_user')}
-                                    />
-                                </FloatingLabel>
-                                <Link to='/inicio'>
-                                    <Button variant="dark" size="md" className=" btn-block" type="submit">Login</Button>
-                                </Link>
+                            <h3 className="mb-5">Logar</h3>
+                            <FloatingLabel controlId="floatingInput" label="E-mail" className="mb-3">
+                                <Form.Control as='input' type="email" placeholder="name@example.com"
+                                    {...register('email_user')}
+                                />
+                            </FloatingLabel>
 
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                </Row>
-            </Container>
-        </div>
+                            <FloatingLabel controlId="floatingPassword" label="Senha" className="mb-5">
+                                <Form.Control type="password" placeholder="Password"
+                                    {...register('senha_user')}
+                                />
+                            </FloatingLabel>
+                            <Link to='/inicio'>
+                                <Button variant="dark" size="md" className=" btn-block" type="submit">Login</Button>
+                            </Link>
+
+                        </Card.Body>
+                    </Card>
+                </Col>
+            </Row>
+        </Container>
+
     )
 }
