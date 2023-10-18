@@ -10,17 +10,17 @@ import App from './App.js'
 import Principal from './pages/Principal/Index.jsx';
 import Eventos from './pages/Eventos/index.jsx';
 import Login from "./pages/Signin/Index";
-import Eventos_Opcoes from "./pages/Eventos/Evento_Principal"
-import Evento_Registro from './pages/Eventos/Evento_Registro.jsx';
-import Cadastrar_usuario from './pages/Usuarios/cadastrar_usuarios.jsx';
-
+import EventosOpcoes from "./pages/Eventos/Evento_Principal"
+import EventoRegistro from './pages/Eventos/Evento_Registro.jsx';
+import CadastrarUsuario from './pages/Usuarios/cadastrar_usuarios.jsx';
+import FormularioSaida from './pages/Usuarios/formulario_saida';
 
 
 // CONJUNTO DE ROTAS DO SITE
 const rotas = createBrowserRouter([
   {
-    path:'/',
-    element:<Login />
+    path: '/',
+    element: <Login />
   },
   {
     path: "/inicio",
@@ -41,15 +41,19 @@ const rotas = createBrowserRouter([
       },
       {
         path: "/inicio/Eventos_Opcoes",
-        element: <Eventos_Opcoes />
+        element: <EventosOpcoes />
       },
       {
         path: "/inicio/Evento_Registro",
-        element: <Evento_Registro />
+        element: <EventoRegistro />
       },
       {
         path: "/inicio/Cadastrar_usuario",
-        element: <Cadastrar_usuario />
+        element: <CadastrarUsuario />
+      },
+      {
+        path: "/inicio/confirmar_presenca",
+        element: <FormularioSaida />
       }
     ]
   },

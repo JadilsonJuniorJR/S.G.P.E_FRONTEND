@@ -1,8 +1,4 @@
-// IMPORTANDO BIBLIOTECAS
-import axios from "axios"
 
-// IMPORTANDO ROTAS
-import { useNavigate } from "react-router-dom";
 
 // IMPORTANDO ELEMENTOS 
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
@@ -10,9 +6,7 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import styles from './styles.module.css'
 
-// Notificação
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 
 // IMPORTANDO ELEMENTOS 
 import { Link } from "react-router-dom";
@@ -21,31 +15,9 @@ import { useForm } from "react-hook-form";
 
 export default function Signin() {
 
-    const { register, handleSubmit, reset, formState: { errors } } = useForm();
-
-    // Utilizando navegações entre rotas
-    const navigate = useNavigate()
-
-    const postData = async (evento) => {
-        console.log(evento)
-        await toast.promise(
-            axios.post("http://localhost:3001/participante/cadastrar", { evento }), {
-            pending: 'Enviando ....',
-            success: 'Cadastro Registrado',
-            error: 'Cadastro não Registrado'
-        })
-            .then(response => {
-                console.log(response.status + "Usuario enviado")
-                // notify()
-
-                setTimeout(() => { return navigate("/") }, 5000)
+    const { register } = useForm();
 
 
-            })
-            .catch((err) => {
-                console.error("ops! ocorreu um erro" + err);
-            });
-    }
 
 
     return (
