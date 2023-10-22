@@ -15,7 +15,7 @@ export default function Eventos() {
     return (
         <Container>
             {/* Linha superior  */}
-            
+
             <Row >
                 <Col sm={12} md={6} lg={4} className={`${styles.caixa_secundaria} `} >
                     <Container className={`${styles.caixa_terciaria} `}>

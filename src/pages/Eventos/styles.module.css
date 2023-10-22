@@ -48,29 +48,36 @@
     resize: both;
 }
 
-.caixa_formulario{
+.caixa_formulario {
     width: 70vw;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.caixa_interna{
+.caixa_interna {
     color: #FFF;
     max-width: 600px;
-    
+
 }
+
 
 @media (max-width: 425px) {
     .caixa {
         height: 20vh;
     }
-    
-    .caixa_formulario{
+
+    .caixa_formulario {
         width: 100vw;
         display: flex;
         flex-direction: column;
-       
+
+    }
+
+    .tabela {
+        width: 100vw;
+        overflow-x: scroll;
+
     }
 }
 

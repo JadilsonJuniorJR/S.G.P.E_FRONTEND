@@ -38,24 +38,24 @@ export default function FormularioSaida() {
 
 
 
-    const postData = async (evento) => {
+    const PostData = async (evento) => {
         console.log(evento)
         await toast.promise(
-            axios.post("http://localhost:3001/participante/cadastrar", { evento }), {
+            axios.post("http://localhost:8080/participante/confirmar", { evento },{headers:{"Content-Type": "application/json"}}), {
             pending: 'Enviando ....',
             success: 'Cadastro Registrado',
             error: 'Cadastro não Registrado'
         })
             .then(response => {
+                console.log(response.headers.getDate)
                 console.log(response.status + "Usuario enviado")
                 // notify()
+                setTimeout(() => { return navigate("/inicio") }, 4000)
 
-                setTimeout(() => { return navigate("/") }, 5000)
-
-
+                
             })
             .catch((err) => {
-                console.error("ops! ocorreu um erro" + err);
+                console.error("ops! ocorreu um erro na requisição" + err);
             });
     }
 
@@ -64,11 +64,11 @@ export default function FormularioSaida() {
     return (
         <Container>
             <Row>
-                <Col sm={12} md={12} lg={12} className={` ${styles.caixa_secundaria}`}>
+                <Col sm={12} md={12} lg={12} className={` ${styles.caixa_secundaria_2}`}>
                     <ToastContainer></ToastContainer>
                     <h2 className="mt-5 mb-5" >Formulário de Confirmação </h2>
                     <Container fluid className={` ${styles.caixa_interna} ${' p-4 bg-dark'}`}>
-                        <Form onSubmit={handleSubmit(postData)} className="overflow-hidden">
+                        <Form onSubmit={handleSubmit(PostData)} className="overflow-hidden">
 
                             <Form.Group className="mb-3" controlId="nome_user">
                                 <Form.Label>Nome: </Form.Label>

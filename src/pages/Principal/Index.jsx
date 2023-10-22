@@ -37,9 +37,9 @@ export default function Principal() {
                         </Link>
                         {/* Botão para Pesquisar Usuario  */}
                         <Link to='#'>
-                            <Button variant="outline-dark"  className={`${styles.botao} `} size="lg"> Pesquisar Usuários </Button>
+                            <Button variant="outline-dark" className={`${styles.botao} `} size="lg"> Pesquisar Usuários </Button>
                         </Link>
-                        
+
                     </Container>
                 </Col>
 
@@ -53,7 +53,7 @@ export default function Principal() {
                         </Link>
                         {/* Botão para Evento  */}
                         <Link to='/inicio/Eventos_Opcoes'>
-                            <Button variant="outline-dark"  className={`${styles.botao} `} size="lg"> Eventos Opçoes </Button>
+                            <Button variant="outline-dark" className={`${styles.botao} `} size="lg"> Eventos Opçoes </Button>
                         </Link>
 
                     </Container>

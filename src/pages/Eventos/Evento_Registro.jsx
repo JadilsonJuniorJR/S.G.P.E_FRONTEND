@@ -1,19 +1,20 @@
 import { Container, Row } from "react-bootstrap";
 import Table from 'react-bootstrap/Table';
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+
 import moment from 'moment/moment';
+
+import axiosInstance from "../../axios/axiosInstance";
 
 import styles from './styles.module.css'
 
 export default function Evento_Registro() {
     const [Eventos_Registrados, setEventos_Registrados] = useState([])
 
-    let chave = 1
     // O useEffect esta realizando a renderização uma unica vez ao iniciar a pagina 
     useEffect(() => {
         // Realizando a chamada ao servidor dos eventos realizados
-        axios.get('http://localhost:8080/evento/buscar_eventos')
+        axiosInstance.get('/evento/buscar_eventos')
             .then((resposta) => {
                 console.log(resposta.data)
                 setEventos_Registrados(resposta.data)
@@ -31,8 +32,8 @@ export default function Evento_Registro() {
             {/* Linha superior  */}
             <Row >
                 <h3>Registro de Eventos</h3>
-                <div>
-                    <Table responsive="sm" striped bordered hover variant="dark">
+                <div className={`${styles.tabela}`}>
+                    <Table  responsive="sm" striped bordered hover variant="dark">
                         <thead>
                             <tr>
                                 <th>ID</th>
@@ -61,55 +62,6 @@ export default function Evento_Registro() {
                             }
                         </tbody>
                     </Table>
-
-                    <section className={`${styles.container_fluid}`}>
-                        <div className={`${styles.col} ${styles.col_12}`}>
-                            <div className={`${styles.item}`}>12 colunas</div>
-                        </div>
-                        <div className={`${styles.col} ${styles.col_6}`}>
-                            <div className={`${styles.item}`}>6 colunas</div>
-                        </div>
-                        <div className={`${styles.col} ${styles.col_6}`}>
-                            <div className={`${styles.item}`}>6 colunas</div>
-                        </div>
-                        <div className={`${styles.col} ${styles.col_1}`}>
-                            <div className={`${styles.item}`}>1</div>
-                        </div>
-                        <div className={`${styles.col} ${styles.col_1}`}>
-                            <div className={`${styles.item}`}>1</div>
-                        </div>
-                        <div className={`${styles.col} ${styles.col_1}`}>
-                            <div className={`${styles.item}`}>1</div>
-                        </div>
-                        <div className={`${styles.col} ${styles.col_1}`}>
-                            <div className={`${styles.item}`}>1</div>
-                        </div>
-                        <div className={`${styles.col} ${styles.col_1}`}>
-                            <div className={`${styles.item}`}>1</div>
-                        </div>
-                        <div className={`${styles.col} ${styles.col_1}`}>
-                            <div className={`${styles.item}`}>1</div>
-                        </div>
-                        <div className={`${styles.col} ${styles.col_1}`}>
-                            <div className={`${styles.item}`}>1</div>
-                        </div>
-                        <div className={`${styles.col} ${styles.col_1}`}>
-                            <div className={`${styles.item}`}>1</div>
-                        </div>
-                        <div className={`${styles.col} ${styles.col_1}`}>
-                            <div className={`${styles.item}`}>1</div>
-                        </div>
-                        <div className={`${styles.col} ${styles.col_1}`}>
-                            <div className={`${styles.item}`}>1</div>
-                        </div>
-                        <div className={`${styles.col} ${styles.col_1}`}>
-                            <div className={`${styles.item}`}>1</div>
-                        </div>
-                        <div className={`${styles.col} ${styles.col_1}`}>
-                            <div className={`${styles.item}`}>1</div>
-                        </div>
-                    </section>
-
 
                     {/* <Table responsive="lg">
                         <thead>

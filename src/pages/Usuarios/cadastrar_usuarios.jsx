@@ -1,5 +1,5 @@
 // IMPORTANDO BIBLIOTECAS
-import axios from "axios"
+import axiosInstance from "../../axios/axiosInstance";
 import { Container, Row, Col } from "react-bootstrap";
 
 // IMPORTANDO ROTAS
@@ -20,8 +20,9 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 
-export default function Cadastrar_usuario() {
 
+
+export default function Cadastrar_usuario() {
     // Utilizando a biblioteca userForm
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
@@ -44,21 +45,22 @@ export default function Cadastrar_usuario() {
     const postData = async (evento) => {
         console.log(evento)
         await toast.promise(
-            axios.post("http://localhost:3001/participante/cadastrar", { evento }), {
+            axiosInstance.post("/participante/cadastrar", { evento }), {
             pending: 'Enviando ....',
             success: 'Cadastro Registrado',
+            // revisar  
             error: 'Cadastro não Registrado'
         })
             .then(response => {
                 console.log(response.status + "Usuario enviado")
                 // notify()
 
-                setTimeout(() => { return navigate("/") }, 5000)
+                setTimeout(() => { return navigate("/inicio") }, 4000)
 
 
             })
             .catch((err) => {
-                console.error("ops! ocorreu um erro" + err);
+                console.error("ops! ocorreu um erro de requisição" + err);
             });
     }
 
@@ -88,7 +90,6 @@ export default function Cadastrar_usuario() {
                             <ErrorMessage
                                 errors={errors}
                                 name="matricula_user"
-
                             />
 
 
@@ -110,7 +111,7 @@ export default function Cadastrar_usuario() {
                                     {...register('email')} />
                             </Form.Group>
 
-                            <Button variant="danger" type="submit" className="me-2" >
+                            <Button variant="danger" type="submit" className="me-2">
                                 Enviar
                             </Button>
                             <Button variant="primary" type="button"

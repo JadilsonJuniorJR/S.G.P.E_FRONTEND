@@ -1,4 +1,4 @@
-.caixa_secundaria {
+.caixa_secundaria , .caixa_secundaria_ {
     height: 100vh;
     width: 60vw;
     padding: 0px;
@@ -8,11 +8,16 @@
     background-color: #ffffff;
 }
 
+.caixa_secundaria_2 {
+    height: 60vh;
+    width: 40vw;
+}
+
 .caixa_interna{
     /* border-radius: 5%; */
-    background-color: #359830;
     color: #FFF;
     max-width: 768px;
+
     /* max-height: 80%; */
     
 }
@@ -24,5 +29,10 @@
 @media (max-width: 425px) {
     .caixa_secundaria {
         width: 90vw;
+    }
+    .caixa_secundaria_2 {
+        width: 90vw;
+        height: 100vh;
+        justify-content: space-evenly;
     }
 } 
