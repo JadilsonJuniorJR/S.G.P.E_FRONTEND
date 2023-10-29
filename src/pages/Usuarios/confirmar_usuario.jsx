@@ -1,5 +1,6 @@
 // IMPORTANDO BIBLIOTECAS
-import axios from "axios"
+import React from "react";
+import axiosInstance from "../../axios/axiosInstance";
 import { Container, Row, Col } from "react-bootstrap";
 
 // IMPORTANDO ROTAS
@@ -36,24 +37,23 @@ export default function FormularioSaida() {
         })
     }
 
-
-
-    const PostData = async (evento) => {
-        console.log(evento)
+    const PutData = async (dados) => {
+        // console.log(dados.nome_user)
         await toast.promise(
-            axios.post("http://localhost:8080/participante/confirmar", { evento },{headers:{"Content-Type": "application/json"}}), {
-            pending: 'Enviando ....',
-            success: 'Cadastro Registrado',
-            error: 'Cadastro não Registrado'
-        })
-            .then(response => {
-                console.log(response.headers.getDate)
-                console.log(response.status + "Usuario enviado")
-                // notify()
-                setTimeout(() => { return navigate("/inicio") }, 4000)
+            axiosInstance.put(`/participante/confirmar/${dados.nome_user}/${dados.matricula}`, { dados }),
+            {
+                pending: 'Enviando ....',
+                success: 'Participante registrado !',
+                error: 'Participante não registrado no sistema !'
+            }
 
-                
-            })
+        ).then(response => {
+            console.log(response)
+            console.log(response.status + " Usuario enviado")
+            // notify()
+            setTimeout(() => { return navigate("/inicio") }, 4000)
+        })
+
             .catch((err) => {
                 console.error("ops! ocorreu um erro na requisição" + err);
             });
@@ -68,7 +68,7 @@ export default function FormularioSaida() {
                     <ToastContainer></ToastContainer>
                     <h2 className="mt-5 mb-5" >Formulário de Confirmação </h2>
                     <Container fluid className={` ${styles.caixa_interna} ${' p-4 bg-dark'}`}>
-                        <Form onSubmit={handleSubmit(PostData)} className="overflow-hidden">
+                        <Form onSubmit={handleSubmit(PutData)} className="overflow-hidden">
 
                             <Form.Group className="mb-3" controlId="nome_user">
                                 <Form.Label>Nome: </Form.Label>

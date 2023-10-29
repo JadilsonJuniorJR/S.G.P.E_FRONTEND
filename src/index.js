@@ -13,7 +13,7 @@ import Login from "./pages/Signin/Index";
 import EventosOpcoes from "./pages/Eventos/Evento_Principal"
 import EventoRegistro from './pages/Eventos/Evento_Registro.jsx';
 import CadastrarUsuario from './pages/Usuarios/cadastrar_usuarios.jsx';
-import FormularioSaida from './pages/Usuarios/formulario_saida';
+import ConfirmarUsuario from './pages/Usuarios/confirmar_usuario';
 
 
 // CONJUNTO DE ROTAS DO SITE
@@ -53,7 +53,7 @@ const rotas = createBrowserRouter([
       },
       {
         path: "/inicio/confirmar_presenca",
-        element: <FormularioSaida />
+        element: <ConfirmarUsuario />
       }
     ]
   },

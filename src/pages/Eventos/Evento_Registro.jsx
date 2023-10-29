@@ -16,7 +16,7 @@ export default function Evento_Registro() {
         // Realizando a chamada ao servidor dos eventos realizados
         axiosInstance.get('/evento/buscar_eventos')
             .then((resposta) => {
-                console.log(resposta.data)
+                // console.log(resposta.data)
                 setEventos_Registrados(resposta.data)
             })
             .catch((error) => {
@@ -62,49 +62,6 @@ export default function Evento_Registro() {
                             }
                         </tbody>
                     </Table>
-
-                    {/* <Table responsive="lg">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Table heading</th>
-                                <th>Table heading</th>
-                                <th>Table heading</th>
-                                <th>Table heading</th>
-                                <th>Table heading</th>
-                                <th>Table heading</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                                <td>Table cell</td>
-                            </tr>
-                        </tbody>
-                    </Table> */}
 
                 </div>
             </Row>

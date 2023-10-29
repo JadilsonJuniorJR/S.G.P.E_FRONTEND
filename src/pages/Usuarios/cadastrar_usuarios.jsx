@@ -42,25 +42,24 @@ export default function Cadastrar_usuario() {
 
 
 
-    const postData = async (evento) => {
-        console.log(evento)
+    const postData = async (dados) => {
+        // console.log(dados)
         await toast.promise(
-            axiosInstance.post("/participante/cadastrar", { evento }), {
+            axiosInstance.post("/participante/cadastrar", { dados }), {
             pending: 'Enviando ....',
             success: 'Cadastro Registrado',
-            // revisar  
             error: 'Cadastro não Registrado'
         })
             .then(response => {
-                console.log(response.status + "Usuario enviado")
+                console.log(response.status + " Usuario enviado")
                 // notify()
-
+                
                 setTimeout(() => { return navigate("/inicio") }, 4000)
 
 
             })
             .catch((err) => {
-                console.error("ops! ocorreu um erro de requisição" + err);
+                console.error("ops! ocorreu um erro de requisição " + err);
             });
     }
 
