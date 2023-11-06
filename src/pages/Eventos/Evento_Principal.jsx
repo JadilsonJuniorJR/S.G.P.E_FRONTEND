@@ -50,11 +50,11 @@ export default function Eventos() {
                     <Container className={`${styles.caixa_terciaria}`}>
 
                         {/* Icone com Link */}
-                        <Nav.Link as={Link} to="#" className="d-flex flex-column justify-content-center align-items-center" >
+                        <Nav.Link as={Link} to="/inicio/evento_arquivar" className="d-flex flex-column justify-content-center align-items-center" >
                             <img className={styles.card_img} src={logo} alt="Img Logo" />
                         </Nav.Link>
                         {/* Botão para Evento  */}
-                        <Link to='#'>
+                        <Link to='/inicio/evento_arquivar'>
                             <Button variant="outline-dark" className={`${styles.botao} `} size="lg"> Arquivar Evento </Button>
                         </Link>
 
