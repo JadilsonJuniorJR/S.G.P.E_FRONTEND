@@ -5,9 +5,12 @@ import Button from 'react-bootstrap/Button';
 import styles from "./styles.module.css";
 
 import logo from "../../assets/icone_evento.png"
-import icone_evento from "../../assets/evento_criar.png"
 import icone_usuario from "../../assets/pesquisar_usuario.png"
+import icone_evento from "../../assets/evento_criar.png"
 import icone_evento_opcoes from "../../assets/evento_opcoes.jpg"
+import icone_qrcode from "../../assets/qrcode.png"
+import icone_adicionar_usuario from "../../assets/adicionar_usuario.png"
+import icone_confirmar_presencia from "../../assets/confirma_presencia.png"
 
 export default function Principal() {
     return (
@@ -32,12 +35,12 @@ export default function Principal() {
                     <Container className={`${styles.caixa}`}>
 
                         {/* Icone com Link */}
-                        <Link to="#" className={`${styles.links}`} >
-                            <img className={styles.card_img} src={icone_usuario} alt="Img Logo" />
+                        <Link to="/inicio/qrcode/gerar"  className={`${styles.links}`} >
+                            <img className={styles.card_img} src={icone_qrcode} alt="Img Logo" />
                         </Link>
                         {/* Botão para Pesquisar Usuario  */}
                         <Link to='#'>
-                            <Button variant="outline-dark" className={`${styles.botao} `} size="lg"> Pesquisar Usuários </Button>
+                            <Button variant="outline-dark" className={`${styles.botao} `} size="lg"> QRCODE </Button>
                         </Link>
 
                     </Container>
@@ -62,8 +65,8 @@ export default function Principal() {
                     <Container className={`${styles.caixa}`}>
 
                         {/* Icone com Link */}
-                        <Nav.Link as={Link} to="/#" className="d-flex flex-column justify-content-center align-items-center" >
-                            <img className={styles.card_img} src={logo} alt="Img Logo" />
+                        <Nav.Link as={Link} to="/inicio/Cadastrar_usuario" className="d-flex flex-column justify-content-center align-items-center" >
+                            <img className={styles.card_img} src={icone_adicionar_usuario} alt="Img Logo" />
                         </Nav.Link>
                         {/* Botão para Evento  */}
                         <Link to='/inicio/Cadastrar_usuario'>
@@ -76,8 +79,8 @@ export default function Principal() {
                     <Container className={`${styles.caixa}`}>
 
                         {/* Icone com Link */}
-                        <Nav.Link as={Link} to="/#" className="d-flex flex-column justify-content-center align-items-center" >
-                            <img className={styles.card_img} src={logo} alt="Img Logo" />
+                        <Nav.Link as={Link} to="/inicio/confirmar_presenca" className="d-flex flex-column justify-content-center align-items-center" >
+                            <img className={styles.card_img} src={icone_confirmar_presencia} alt="Img Logo" />
                         </Nav.Link>
                         {/* Botão para Evento  */}
                         <Link to='/inicio/confirmar_presenca'>
