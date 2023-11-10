@@ -13,7 +13,7 @@ import Principal from './pages/Principal/Index.jsx';
 import Eventos from './pages/Eventos/index.jsx';
 import EventosOpcoes from "./pages/Eventos/Evento_Principal"
 import EventoRegistro from './pages/Eventos/Evento_Registro.jsx';
-import EventoArquivar from './pages/Eventos/Evento_Arquivar.jsx'
+import EventoLista from './pages/Eventos/Evento_Lista.jsx'
 
 import Qrcode from "./pages/QrCode/Index_qrcode.jsx"
 import QrcodeGerar from "./pages/QrCode/GerarQrcode.jsx"
@@ -62,8 +62,8 @@ const rotas = createBrowserRouter([
         element: <EventoRegistro />
       },
       {
-        path: "/inicio/evento_arquivar",
-        element: <EventoArquivar />
+        path: "/inicio/evento_lista",
+        element: <EventoLista />
       },
       {
         path: "/inicio/Cadastrar_usuario",
