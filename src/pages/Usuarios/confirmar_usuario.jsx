@@ -40,7 +40,7 @@ export default function FormularioSaida() {
     const PutData = async (dados) => {
         // console.log(dados.nome_user)
         await toast.promise(
-            axiosInstance.put(`/participante/confirmar/${dados.nome_user}/${dados.matricula}`, { dados }),
+            axiosInstance.put(`/participante/confirmar/${dados.nome_user}/${dados.matricula}`),
             {
                 pending: 'Enviando ....',
                 success: 'Participante registrado !',

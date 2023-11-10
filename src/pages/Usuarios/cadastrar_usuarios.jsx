@@ -18,7 +18,7 @@ import styles from "./styles.module.css";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
+import { useLocation } from 'react-router-dom';
 
 
 
@@ -35,15 +35,25 @@ export default function Cadastrar_usuario() {
             nome_user: '',
             matricula: '',
             curso: '',
+            id_evento: '',
             campus: '',
             email: ''
         })
     }
 
+    // Pegando o ID do Evento vinda pelo QRCODE
+    const location = useLocation();
+    const searchParams = new URLSearchParams(location.search);
+    const id = searchParams.get("id");
 
 
     const postData = async (dados) => {
-        // console.log(dados)
+       
+        console.log(dados)
+        if(dados.id_evento === ''){
+            dados.id_evento=id
+        }
+        
         await toast.promise(
             axiosInstance.post("/participante/cadastrar", { dados }), {
             pending: 'Enviando ....',
@@ -53,7 +63,7 @@ export default function Cadastrar_usuario() {
             .then(response => {
                 console.log(response.status + " Usuario enviado")
                 // notify()
-                
+
                 setTimeout(() => { return navigate("/inicio") }, 4000)
 
 
@@ -91,6 +101,11 @@ export default function Cadastrar_usuario() {
                                 name="matricula_user"
                             />
 
+                            <Form.Group className="mb-3" controlId="id_evento">
+                                <Form.Label>ID Evento:</Form.Label>
+                                <Form.Control as='input' type="number" placeholder="Caso tenha digite o ID do Evento:"
+                                    {...register('id_evento')} />
+                            </Form.Group>
 
                             <Form.Group className="mb-3" controlId="curso_user">
                                 <Form.Label>Curso:</Form.Label>
