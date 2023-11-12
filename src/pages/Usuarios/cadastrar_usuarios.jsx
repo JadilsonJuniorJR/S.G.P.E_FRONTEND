@@ -57,8 +57,8 @@ export default function Cadastrar_usuario() {
         await toast.promise(
             axiosInstance.post("/participante/cadastrar", { dados }), {
             pending: 'Enviando ....',
-            success: 'Cadastro Registrado',
-            error: 'Cadastro não Registrado'
+            success: 'Cadastro Registrado !',
+            error: 'Cadastro não Registrado !'
         })
             .then(response => {
                 console.log(response.status + " Usuario enviado")
@@ -69,6 +69,7 @@ export default function Cadastrar_usuario() {
 
             })
             .catch((err) => {
+                // toast({error: 'Cadastro não Registrado !'})
                 console.error("ops! ocorreu um erro de requisição " + err);
             });
     }
