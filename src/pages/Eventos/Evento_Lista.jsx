@@ -27,8 +27,8 @@ function Evento_Lista() {
         await toast.promise(
             axiosInstance.get('/evento/listar_evento'), {
             pending: 'Enviando ....',
-            success: 'Cadastro Registrado',
-            error: 'Cadastro não Registrado'
+            success: 'Lista De Eventos Gerada !',
+            error: 'Erro Lista De Eventos Não Gerada !'
         })
             .then((resposta) => {
                 // console.log(resposta.data)
@@ -48,7 +48,6 @@ function Evento_Lista() {
 
                 // Libera o objeto URL quando não for mais necessário
                 URL.revokeObjectURL(url)
-                // window.URL.revokeObjectURL(url);
             })
             .catch((error) => {
                 console.error('Erro ao buscar dados:', error);
@@ -59,8 +58,8 @@ function Evento_Lista() {
         await toast.promise(
             axiosInstance.get('/evento/listar_participantes'), {
             pending: 'Enviando ....',
-            success: 'Cadastro Registrado',
-            error: 'Cadastro não Registrado'
+            success: 'Lista De Participantes Gerada !',
+            error: 'Erro Lista De Participantes Não Gerada !'
         })
             .then((resposta) => {
                 // Criando o Arquivo com os dados do CSV 
@@ -88,13 +87,33 @@ function Evento_Lista() {
     }
 
     return (
-        <Container className={` ${styles.conteiner}`}>
+        <Container className={` ${styles.caixa_lista}`}>
             <Row>
                 <h2>Listas do Evento</h2>
             </Row>
-            <Row className={styles.linha}>
+            <Row>
                 <ToastContainer></ToastContainer>
-                <Container className={`${styles.caixa_terciaria_2}`}>
+
+                <Col className={styles.caixa_secundaria} >
+                    <Container className={styles.caixa_terciaria}>
+                        <Nav className={styles.links} >
+                            <img className={styles.card_img} src={icone_listas_evento} alt="Img Logo" />
+                        </Nav>
+                        <Button variant="outline-dark" onClick={GetDataEvento} className={`${styles.botao} `} size="lg">Gerar Lista dos Eventos</Button>
+                    </Container>
+                </Col>
+
+                <Col className={styles.caixa_secundaria} >
+                    <Container className={styles.caixa_terciaria}>
+                        <Nav className={styles.links} >
+                            <img className={styles.card_img} src={icone_listas_usuario} alt="Img Logo" />
+                        </Nav>
+                        <Button variant="outline-dark" onClick={GetDataParticipante} className={`${styles.botao} `} size="lg">Gerar Lista dos Participantes</Button>
+                    </Container>
+                </Col>
+
+
+                {/* <Container className={`${styles.caixa_terciaria_2}`}>
                     <section>
                         <Nav className="d-flex flex-column justify-content-center align-items-center" >
                             <img className={styles.card_img} src={icone_listas_evento} alt="Img Logo" />
@@ -107,7 +126,7 @@ function Evento_Lista() {
                         </Nav>
                         <Button variant="outline-dark" onClick={GetDataParticipante} className={`${styles.botao} `} size="lg">Gerar Lista dos Participantes</Button>
                     </section>
-                </Container>
+                </Container> */}
             </Row>
 
         </Container >

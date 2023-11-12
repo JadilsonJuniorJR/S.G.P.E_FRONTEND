@@ -1,11 +1,15 @@
-import { Container, Row } from "react-bootstrap";
+// IMPORTANDO BIBLIOTECAS DE LAYOUT 
 import Table from 'react-bootstrap/Table';
-import { useState, useEffect } from 'react';
+import { Container, Row } from "react-bootstrap";
 
+// BIBLIOTECA PARA MANIPULAR DADAS 
 import moment from 'moment/moment';
 
-import axiosInstance from "../../axios/axiosInstance";
+// BIBLIOTECAS REACT
+import { useState, useEffect } from 'react';
 
+// IMPORTANDO ARQUIVOS 
+import axiosInstance from "../../axios/axiosInstance.js";
 import styles from './styles.module.css'
 
 export default function Evento_Registro() {
@@ -26,14 +30,14 @@ export default function Evento_Registro() {
     }, [])
 
 
-
     return (
-        <Container fluid >
-            {/* Linha superior  */}
-            <Row >
+        <Container className={styles.caixa_registro} >
+            <Row>
                 <h3>Registro de Eventos</h3>
-                <div className={`${styles.tabela}`}>
-                    <Table  responsive="sm" striped bordered hover variant="dark">
+            </Row>
+            <Row >
+                <Container className={styles.tabela}>
+                    <Table responsive="sm" striped bordered hover variant="dark">
                         <thead>
                             <tr>
                                 <th>ID</th>
@@ -62,8 +66,7 @@ export default function Evento_Registro() {
                             }
                         </tbody>
                     </Table>
-
-                </div>
+                </Container>
             </Row>
         </Container>
     )

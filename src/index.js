@@ -10,7 +10,7 @@ import App from './App.js'
 import Login from "./pages/Signin/Index";
 import Principal from './pages/Principal/Index.jsx';
 
-import Eventos from './pages/Eventos/index.jsx';
+import EventoCadastrar from './pages/Eventos/Evento_Cadastrar.jsx';
 import EventosOpcoes from "./pages/Eventos/Evento_Principal"
 import EventoRegistro from './pages/Eventos/Evento_Registro.jsx';
 import EventoLista from './pages/Eventos/Evento_Lista.jsx'
@@ -39,7 +39,7 @@ const rotas = createBrowserRouter([
       },
       {
         path: "/inicio/eventos",
-        element: <Eventos />
+        element: <EventoCadastrar />
       },
       {
         path: "/inicio/login",
