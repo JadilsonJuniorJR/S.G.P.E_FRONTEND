@@ -19,16 +19,15 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import axios from "axios";
 
+export default function QrcodeSaida() {
 
-export default function GerarQrcode() {
-
-    // Utilizando a bibli oteca userForm
+    // Utilizando a biblioteca userForm
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
-
     const [qrcode, setQRCode] = useState('');
 
+    // Função para Enviar a Requisição
     const PostDados = async (dados) => {
-        console.log(dados)
+
         await toast.promise(
             axiosInstance.post(`/qrcode/gerar`, { dados }),
             {
@@ -42,7 +41,7 @@ export default function GerarQrcode() {
             const dataURL = response.data; // Supondo que a resposta contenha o data URL da imagem
             const savePath = './qrcode.png'; // Caminho para salvar a imagem localmente
 
-            function downloadImage(url, path) {
+            const BaixarIMG= (url, path) => {
                 axios.get(url, { responseType: 'arraybuffer' })
                     .then((response) => {
                         const blob = new Blob([response.data], { type: 'image/png' });
@@ -51,7 +50,7 @@ export default function GerarQrcode() {
                         // Cria um link temporário e faz o download do arquivo
                         const link = document.createElement('a');
                         link.href = url;
-                        link.download = 'qrcode.png'; // Nome do arquivo para download
+                        link.download = 'qrcode_saida.png'; // Nome do arquivo para download
                         document.body.appendChild(link);
                         link.click();
 
@@ -63,9 +62,7 @@ export default function GerarQrcode() {
                     });
             }
             // Chamar a função para fazer o download e salvar a imagem
-            downloadImage(dataURL, savePath);
-
-
+            BaixarIMG(dataURL, savePath);
         })
             .catch((err) => {
                 console.error("ops! ocorreu um erro na requisição" + err);
@@ -73,10 +70,10 @@ export default function GerarQrcode() {
     }
 
     return (
-        <Container className={` ${styles.caixa_qrcode_2}`}>
+        <Container className={styles.caixa_qrcode_2}>
             <Row>
                 <Container className={styles.caixa_titulo}>
-                    <h2>Gerar QRCODE Entrada</h2>
+                    <h2>Gerar QRCODE Saída</h2>
                 </Container>
             </Row>
             <Row>
@@ -91,10 +88,10 @@ export default function GerarQrcode() {
                                     <Form.Control as='input' type="number" placeholder="Digite o ID do evento:" required
                                         {...register('id_evento')} />
                                 </Form.Group>
-                                <ErrorMessage errors={errors} name="id_evento" />
+                                <ErrorMessage errors={errors} name="id_evento"/>
 
                                 <Button variant="danger" type="submit" className="me-2" > Enviar </Button>
-                                <Button variant="primary" type="button" onClick={() => reset()} > Limpar </Button>
+                                <Button variant="primary" type="button" onClick={()=>reset()}> Limpar </Button>
                             </Form>
                         </Container>
                     </Container>
@@ -105,13 +102,14 @@ export default function GerarQrcode() {
                             <div className={styles.caixa_titulo_2}>
                                 <h3>QRCODE</h3>
                             </div>
+
                         </Col>
                         <Col>
                             <Container className={styles.caixa_terciaria_4} >
                                 {
-                                    <Container>
+                                    <>
                                         {qrcode && <img src={qrcode} alt="QR Code" />}
-                                    </Container>
+                                    </>
                                 }
                             </Container>
                         </Col>

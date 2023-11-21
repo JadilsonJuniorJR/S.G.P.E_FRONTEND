@@ -1,4 +1,4 @@
-.caixa_primaria,
+/* .caixa_primaria,
 .caixa_secundaria,
 .caixa_terciaria,
 .linha_1 {
@@ -12,13 +12,13 @@
     width: 70vh;
     justify-content: flex-start;
     box-sizing: border-box;
-    /* border: 1px solid #0F0; */
+    border: 1px solid #0F0; 
 }
 
 .caixa_secundaria {
     height: 10vh;
     justify-content: center;
-    /* border: 1px solid #F00; */
+     border: 1px solid #F00; 
 }
 
 .linha_1 {
@@ -26,21 +26,21 @@
     align-items: flex-start;
     flex-direction: row;
     padding: 5px;
-    /* border: 1px solid #00F; */
+    border: 1px solid #00F; 
 
 }
 
 .coluna_1 {
     width: 50%;
     height: 30vh;
-    /* border: 1px solid #0FF; */
+    border: 1px solid #0FF; 
 }
 
 .caixa_terciaria {
     flex-direction: row;
     justify-content: center;
     height: 30vh;
-    /* border: 1px solid #000; */
+     border: 1px solid #000;
 }
 
 .painel_qrcode {
@@ -101,7 +101,7 @@
         height: 30vh;
         justify-content: space-between;
         margin: 10px;
-        /* border: 1px solid #0FF; */
+         border: 1px solid #0FF; 
     }
 
     .caixa_terciaria {
@@ -118,4 +118,193 @@
         border: 1px solid #777;
     }
 
+} */
+
+
+
+/*Style QRCODE Principal */
+
+.caixa_qrcode {
+    height: 60vh;
+    width: 60vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* border: 1px solid #0F0; */
+}
+
+.caixa_secundaria {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 27vh;
+    padding: 5px;
+    /* border: 1px solid #F00; */
+}
+
+.caixa_terciaria {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 80%;
+    /* border: 1px solid aqua; */
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-bottom: 5px;
+    /* border: 1px solid #F0F; */
+}
+
+.botao {
+    width: 180px;
+}
+
+.card_img {
+    width: 50%;
+    padding-bottom: 5%;
+}
+
+
+
+/* Style QRCODE GERAR ENTRADA */
+
+.caixa_qrcode_2 {
+    height: 60vh;
+    width: 60vw;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border: 1px solid #0F0;
+}
+
+.caixa_titulo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    padding: 5px;
+    border: 1px solid #8000ff;
+}
+
+
+.caixa_titulo_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+
+    border: 1px solid #8000ff;
+}
+
+.caixa_secundaria_2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #8000ff;
+}
+
+.caixa_terciaria_2 {
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 60%;
+    border: 1px solid aqua;
+}
+
+.caixa_terciaria_3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 80%;
+    border: 1px solid rgb(255, 217, 0);
+}
+
+.caixa_terciaria_4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    border: 1px solid rgb(255, 0, 242);
+}
+
+.caixa_form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    
+    max-width: 350px;
+    max-height: 350px;
+    height: 35vh;
+    border-radius: 5%;
+}
+
+
+@media (max-width: 426px) {
+
+    .caixa_qrcode{
+        height: 100vh;
+        width: 100vw;
+        justify-content: space-evenly;
+    }
+
+    /* Style QRCODE Principal */
+    .caixa_qrcode_2 {
+        height: 100vh;
+        width: 100vw;
+        justify-content: space-evenly;
+    }
+
+
+    .caixa_terciaria {
+        height: auto;
+        flex-direction: row;
+    }
+
+    /* Style QRCODE GERAR ENTRADA */
+    .caixa_secundaria_2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        border: 1px solid #800040;
+    }
+
+    .caixa_terciaria_3 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: 25vh;
+        border: 1px solid rgb(255, 217, 0);
+    }
+
+    .caixa_form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FFF;
+        width: 80vw;
+        height: 35vh;
+    }
 }

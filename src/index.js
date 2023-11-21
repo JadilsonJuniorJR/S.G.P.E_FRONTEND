@@ -17,6 +17,7 @@ import EventoLista from './pages/Eventos/Evento_Lista.jsx'
 
 import Qrcode from "./pages/QrCode/Index_qrcode.jsx"
 import QrcodeGerar from "./pages/QrCode/GerarQrcode.jsx"
+import QrcodeSaida from './pages/QrCode/Qrcode_saida.jsx'
 
 import CadastrarUsuario from './pages/Usuarios/cadastrar_usuarios.jsx';
 import ConfirmarUsuario from './pages/Usuarios/confirmar_usuario';
@@ -47,11 +48,15 @@ const rotas = createBrowserRouter([
       },
       {
         path: "/inicio/qrcode",
-        element: <Qrcode/>
+        element: <Qrcode />
       },
       {
         path: "/inicio/qrcode/gerar",
-        element: <QrcodeGerar/>
+        element: <QrcodeGerar />
+      },
+      {
+        path: "/inicio/qrcode/saida",
+        element: <QrcodeSaida />
       },
       {
         path: "/inicio/Eventos_Opcoes",
