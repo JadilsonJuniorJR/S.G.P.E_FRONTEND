@@ -4,8 +4,6 @@ import { Nav } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 import styles from "./styles.module.css";
 
-import logo from "../../assets/icone_evento.png"
-import icone_usuario from "../../assets/pesquisar_usuario.png"
 import icone_evento from "../../assets/evento_criar.png"
 import icone_evento_opcoes from "../../assets/evento_opcoes.jpg"
 import icone_qrcode from "../../assets/qrcode.png"
@@ -14,7 +12,7 @@ import icone_confirmar_presencia from "../../assets/confirma_presencia.png"
 
 export default function Principal() {
     return (
-        <Container  >
+        <Container className={`${styles.caixa_principal} `} >
             {/* Linha superior  */}
             <Row >
                 <Col sm={12} md={6} lg={4} className={`${styles.caixa_secundaria} `} >
@@ -22,7 +20,7 @@ export default function Principal() {
 
                         {/* Icone com Link */}
                         <Link as={Link} to="/inicio/eventos" className={`${styles.links}`} >
-                            <img className={styles.card_img} src={icone_evento} alt="Icones de Criar Eventos" />
+                            <img className={styles.card_img} src={icone_evento} alt="Icones de Gerar Eventos" />
                         </Link>
                         {/* Botão para Evento  */}
                         <Link to='/inicio/eventos'>
@@ -35,11 +33,11 @@ export default function Principal() {
                     <Container className={`${styles.caixa}`}>
 
                         {/* Icone com Link */}
-                        <Link to="/inicio/qrcode/gerar"  className={`${styles.links}`} >
-                            <img className={styles.card_img} src={icone_qrcode} alt="Img Logo" />
+                        <Link to='/inicio/qrcode'  className={`${styles.links}`} >
+                            <img className={styles.card_img} src={icone_qrcode} alt="Icone de Gerar QRCODE" />
                         </Link>
                         {/* Botão para Pesquisar Usuario  */}
-                        <Link to='#'>
+                        <Link to='/inicio/qrcode'>
                             <Button variant="outline-dark" className={`${styles.botao} `} size="lg"> QRCODE </Button>
                         </Link>
 

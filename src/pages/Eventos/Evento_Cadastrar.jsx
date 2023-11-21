@@ -73,7 +73,7 @@ export default function Evento_Cadastrar() {
       <Row className={` ${styles.linha_formulario}`}>
         <ToastContainer></ToastContainer>
 
-        <Container fluid className={` ${styles.caixa_interna} ${'  p-4 bg-dark rounded'}`}>
+        <Container className={` ${styles.caixa_interna} ${'  p-4 bg-dark rounded'}`}>
           <Form onSubmit={handleSubmit(postData)} >
             <Row >
               <Form.Group as={Col} className="mb-3" controlId="nome_evento">
@@ -129,13 +129,8 @@ export default function Evento_Cadastrar() {
                 {...register('descricao')} />
             </Form.Group>
 
-            <Button variant="danger" type="submit" className="me-2" >
-              Enviar
-            </Button>
-            <Button variant="primary" type="button"
-              onClick={limparForm} >
-              Limpar
-            </Button>
+            <Button variant="danger" type="submit" className="me-2" > Enviar </Button>
+            <Button variant="primary" type="button" onClick={limparForm} > Limpar </Button>
           </Form>
         </Container>
       </Row>

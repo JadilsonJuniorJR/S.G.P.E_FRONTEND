@@ -38,7 +38,6 @@ export default function FormularioSaida() {
     }
 
     const PutData = async (dados) => {
-        // console.log(dados.nome_user)
         await toast.promise(
             axiosInstance.put(`/participante/confirmar/${dados.nome_user}/${dados.matricula}`),
             {
@@ -51,11 +50,13 @@ export default function FormularioSaida() {
             console.log(response)
             console.log(response.status + " Usuario enviado")
             // notify()
-            setTimeout(() => { return navigate("/inicio") }, 4000)
+            setTimeout(() => { return navigate("/inicio") }, 2000)
         })
-
             .catch((err) => {
                 console.error("ops! ocorreu um erro na requisição" + err);
+                if(err.response.status === 409){
+                    toast.error("Usuário Já realizou a confirmação",{autoClose: 2000,})
+                }
             });
     }
 
@@ -65,7 +66,7 @@ export default function FormularioSaida() {
         <Container>
             <Row>
                 <Col sm={12} md={12} lg={12} className={` ${styles.caixa_secundaria_2}`}>
-                    <ToastContainer></ToastContainer>
+                    <ToastContainer pauseOnFocusLoss={false} ></ToastContainer>
                     <h2 className="mt-5 mb-5" >Formulário de Confirmação </h2>
                     <Container fluid className={` ${styles.caixa_interna} ${' p-4 bg-dark'}`}>
                         <Form onSubmit={handleSubmit(PutData)} className="overflow-hidden">

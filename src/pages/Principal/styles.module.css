@@ -34,9 +34,11 @@
 }
 
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
+
     .caixa_secundaria {
         height: 20vh;
+        border: 1px solid #F00;
     }
 
     .caixa {

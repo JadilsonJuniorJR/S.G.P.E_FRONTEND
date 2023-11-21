@@ -48,12 +48,12 @@ export default function Cadastrar_usuario() {
 
 
     const postData = async (dados) => {
-       
+
         console.log(dados)
-        if(dados.id_evento === ''){
-            dados.id_evento=id
+        if (dados.id_evento === '') {
+            dados.id_evento = id
         }
-        
+
         await toast.promise(
             axiosInstance.post("/participante/cadastrar", { dados }), {
             pending: 'Enviando ....',
@@ -62,11 +62,7 @@ export default function Cadastrar_usuario() {
         })
             .then(response => {
                 console.log(response.status + " Usuario enviado")
-                // notify()
-
                 setTimeout(() => { return navigate("/inicio") }, 4000)
-
-
             })
             .catch((err) => {
                 // toast({error: 'Cadastro não Registrado !'})
@@ -75,32 +71,40 @@ export default function Cadastrar_usuario() {
     }
 
 
-
     return (
-        <Container>
+        <Container className={` ${styles.caixa_cadastrar}`}>
             <Row>
-                <Col sm={12} md={12} lg={12} className={` ${styles.caixa_secundaria}`}>
+                <h2 >Formulário de Inscrições </h2>
+            </Row>
+            <Row>
+                <Col className={` ${styles.caixa_secundaria}`}>
                     <ToastContainer></ToastContainer>
-                    <h2 className="mt-5 mb-5" >Formulário de Inscrições </h2>
+
                     <Container fluid className={` ${styles.caixa_interna} ${' p-4 bg-dark'}`}>
-                        <Form onSubmit={handleSubmit(postData)} className="overflow-hidden">
+                        <Form onSubmit={handleSubmit(postData)} className={styles.caixa_form}>
+                            <Row>
+                                <Form.Group className="mb-3" controlId="nome_user">
+                                    <Form.Label>Nome: </Form.Label>
+                                    <Form.Control as='input' type="text" placeholder="Digite o seu nome:"
+                                        {...register('nome_user')}
+                                    />
+                                </Form.Group>
 
-                            <Form.Group className="mb-3" controlId="nome_user">
-                                <Form.Label>Nome: </Form.Label>
-                                <Form.Control as='input' type="text" placeholder="Digite o seu nome:"
-                                    {...register('nome_user')}
+                            </Row>
+
+                            <Row>
+                                <Form.Group className="mb-3" controlId="matricula_user">
+                                    <Form.Label>Matrícula:</Form.Label>
+                                    <Form.Control as='input' type="number" placeholder="Digite a sua matrícula:" required
+                                        {...register('matricula', { required: 'Preenchimento Obrigatorio !', maxLength: 10 })} />
+                                </Form.Group>
+                                <ErrorMessage
+                                    errors={errors}
+                                    name="matricula_user"
                                 />
-                            </Form.Group>
 
-                            <Form.Group className="mb-3" controlId="matricula_user">
-                                <Form.Label>Matrícula:</Form.Label>
-                                <Form.Control as='input' type="number" placeholder="Digite a sua matrícula:" required
-                                    {...register('matricula', { required: 'Preenchimento Obrigatorio !', maxLength: 10 })} />
-                            </Form.Group>
-                            <ErrorMessage
-                                errors={errors}
-                                name="matricula_user"
-                            />
+                            </Row>
+
 
                             <Form.Group className="mb-3" controlId="id_evento">
                                 <Form.Label>ID Evento:</Form.Label>
