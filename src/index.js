@@ -14,6 +14,7 @@ import EventoCadastrar from './pages/Eventos/Evento_Cadastrar.jsx';
 import EventosOpcoes from "./pages/Eventos/Evento_Principal"
 import EventoRegistro from './pages/Eventos/Evento_Registro.jsx';
 import EventoLista from './pages/Eventos/Evento_Lista.jsx'
+import Evento_Lista_Pesquisar from './pages/Eventos/Evento_Lista_Pesquisar.jsx';
 
 import Qrcode from "./pages/QrCode/Index_qrcode.jsx"
 import QrcodeGerar from "./pages/QrCode/GerarQrcode.jsx"
@@ -69,6 +70,10 @@ const rotas = createBrowserRouter([
       {
         path: "/inicio/evento_lista",
         element: <EventoLista />
+      },
+      {
+        path: "/inicio/evento_lista_pesquisa",
+        element: <Evento_Lista_Pesquisar/>
       },
       {
         path: "/inicio/Cadastrar_usuario",

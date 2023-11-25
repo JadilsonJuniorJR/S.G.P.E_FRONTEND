@@ -111,22 +111,6 @@ function Evento_Lista() {
                         <Button variant="outline-dark" onClick={GetDataParticipante} className={`${styles.botao} `} size="lg">Gerar Lista dos Participantes</Button>
                     </Container>
                 </Col>
-
-
-                {/* <Container className={`${styles.caixa_terciaria_2}`}>
-                    <section>
-                        <Nav className="d-flex flex-column justify-content-center align-items-center" >
-                            <img className={styles.card_img} src={icone_listas_evento} alt="Img Logo" />
-                        </Nav>
-                        <Button variant="outline-dark" onClick={GetDataEvento} className={`${styles.botao} `} size="lg">Gerar Lista dos Eventos</Button>
-                    </section>
-                    <section>
-                        <Nav className="d-flex flex-column justify-content-center align-items-center" >
-                            <img className={styles.card_img} src={icone_listas_usuario} alt="Img Logo" />
-                        </Nav>
-                        <Button variant="outline-dark" onClick={GetDataParticipante} className={`${styles.botao} `} size="lg">Gerar Lista dos Participantes</Button>
-                    </section>
-                </Container> */}
             </Row>
 
         </Container >

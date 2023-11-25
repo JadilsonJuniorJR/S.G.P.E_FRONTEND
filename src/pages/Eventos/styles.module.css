@@ -102,6 +102,89 @@
     padding-bottom: 5%;
 }
 
+/* Evento Listar Pesquisar */
+
+.caixa_qrcode_2 {
+    height: 60vh;
+    width: 60vw;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border: 1px solid #0F0;
+}
+
+.caixa_titulo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    padding: 5px;
+    border: 1px solid #8000ff;
+}
+
+
+.caixa_titulo_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+
+    border: 1px solid #8000ff;
+}
+
+.caixa_secundaria_2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #8000ff;
+}
+
+.caixa_terciaria_2 {
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 60%;
+    border: 1px solid aqua;
+}
+
+.caixa_terciaria_3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 80%;
+    border: 1px solid rgb(255, 217, 0);
+}
+
+.caixa_terciaria_4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    border: 1px solid rgb(255, 0, 242);
+}
+
+.caixa_form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    
+    max-width: 350px;
+    max-height: 350px;
+    height: 35vh;
+    border-radius: 5%;
+}
+
+
 
 @media (max-width: 426px) {
 
