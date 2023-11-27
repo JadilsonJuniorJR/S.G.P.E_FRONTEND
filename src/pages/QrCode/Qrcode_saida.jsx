@@ -27,7 +27,7 @@ export default function QrcodeSaida() {
 
     // Função para Enviar a Requisição
     const PostDados = async (dados) => {
-
+        dados.opc = 2
         await toast.promise(
             axiosInstance.post(`/qrcode/gerar`, { dados }),
             {
@@ -37,11 +37,12 @@ export default function QrcodeSaida() {
             }
 
         ).then(response => {
+            // Armazenando os dados vindo do SERVER
             setQRCode(response.data)
             const dataURL = response.data; // Supondo que a resposta contenha o data URL da imagem
-            const savePath = './qrcode.png'; // Caminho para salvar a imagem localmente
-
-            const BaixarIMG= (url, path) => {
+            const savePath = './'; // Caminho para salvar a imagem localmente
+             // Função para fazer o download e salvar a imagem
+            const BaixarIMG = (url, path) => {
                 axios.get(url, { responseType: 'arraybuffer' })
                     .then((response) => {
                         const blob = new Blob([response.data], { type: 'image/png' });
@@ -78,9 +79,9 @@ export default function QrcodeSaida() {
             </Row>
             <Row>
                 <Col className={styles.caixa_secundaria_2}>
-                    <ToastContainer></ToastContainer>
+                    <ToastContainer pauseOnFocusLoss={false} ></ToastContainer>
                     <Container className={styles.caixa_terciaria_2} >
-                        <Container className={`${styles.caixa_form} ${' bg-dark'}`}>
+                        <Container className={`${styles.caixa_form} ${' bg-dark rounded'}`}>
                             <Form onSubmit={handleSubmit(PostDados)}>
 
                                 <Form.Group className="mb-3" controlId="id_evento">
@@ -88,10 +89,10 @@ export default function QrcodeSaida() {
                                     <Form.Control as='input' type="number" placeholder="Digite o ID do evento:" required
                                         {...register('id_evento')} />
                                 </Form.Group>
-                                <ErrorMessage errors={errors} name="id_evento"/>
+                                <ErrorMessage errors={errors} name="id_evento" />
 
                                 <Button variant="danger" type="submit" className="me-2" > Enviar </Button>
-                                <Button variant="primary" type="button" onClick={()=>reset()}> Limpar </Button>
+                                <Button variant="primary" type="button" onClick={() => reset()}> Limpar </Button>
                             </Form>
                         </Container>
                     </Container>
@@ -105,10 +106,10 @@ export default function QrcodeSaida() {
 
                         </Col>
                         <Col>
-                            <Container className={styles.caixa_terciaria_4} >
+                            <Container className={ `${styles.caixa_terciaria_4} ${'rounded'}`} >
                                 {
                                     <>
-                                        {qrcode && <img src={qrcode} alt="QR Code" />}
+                                        {qrcode && <img src={qrcode} className={styles.qr_img} alt="QR Code" />}
                                     </>
                                 }
                             </Container>

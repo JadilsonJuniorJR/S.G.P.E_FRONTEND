@@ -54,7 +54,7 @@ export default function Principal() {
                         </Link>
                         {/* Botão para Evento  */}
                         <Link to='/inicio/Eventos_Opcoes'>
-                            <Button variant="outline-dark" className={`${styles.botao} `} size="lg"> Eventos Opçoes </Button>
+                            <Button variant="outline-dark" className={`${styles.botao} `} size="lg"> Eventos Opções </Button>
                         </Link>
 
                     </Container>
@@ -68,7 +68,7 @@ export default function Principal() {
                         </Nav.Link>
                         {/* Botão para Evento  */}
                         <Link to='/inicio/Cadastrar_usuario'>
-                            <Button variant="outline-dark" className={`${styles.botao} `} size="lg"> Cadastrar Usuários em Eventos </Button>
+                            <Button variant="outline-dark" className={`${styles.botao} `} size="lg"> Confirma entrada de Participante </Button>
                         </Link>
 
                     </Container>
@@ -82,7 +82,7 @@ export default function Principal() {
                         </Nav.Link>
                         {/* Botão para Evento  */}
                         <Link to='/inicio/confirmar_presenca'>
-                            <Button variant="outline-dark" className={`${styles.botao} `} size="lg"> Formulario de Saida do Usuários</Button>
+                            <Button variant="outline-dark" className={`${styles.botao} `} size="lg"> Confirma Saída do Participante</Button>
                         </Link>
 
                     </Container>

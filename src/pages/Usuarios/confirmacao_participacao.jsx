@@ -21,10 +21,10 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 
-export default function FormularioSaida() {
+export default function Confirmacao_Participacao() {
 
     // Utilizando a biblioteca userForm
-    const { register, handleSubmit, reset, formState: { errors } } = useForm();
+    const { register, handleSubmit, reset } = useForm();
 
     // Utilizando navegações entre rotas
     const navigate = useNavigate()
@@ -53,37 +53,48 @@ export default function FormularioSaida() {
     }
 
 
+
     return (
-        <Container className={` ${styles.formulario_confirmacao}`}>
+        <Container className={` ${styles.confirma_participacao}`}>
             <Row>
-                <h2>Formulário de Confirmação </h2>
-            </Row>
-            <Row>
-                <Col className={` ${styles.caixa_secundaria_2}`}>
+                <Col sm={12} md={12} lg={12} className={` ${styles.caixa_secundaria_participacao}`}>
                     <ToastContainer pauseOnFocusLoss={false} ></ToastContainer>
-                    <Container fluid className={` ${styles.caixa_interna_2} ${' p-4 bg-dark rounded'}`}>
+                    <h2 className="mt-5 mb-5" >Formulário de Confirmação </h2>
+                    <Container fluid className={` ${styles.caixa_interna_2_participacao} ${' p-4 bg-dark rounded'}`}>
                         <Form onSubmit={handleSubmit(PutData)} className="overflow-hidden">
                             <Row>
                                 <Form.Group className="mb-3" controlId="nome_user">
                                     <Form.Label>Nome: </Form.Label>
                                     <Form.Control as='input' type="text" placeholder="Digite o seu nome:"
-                                        {...register('nome_user')} />
+                                        {...register('nome_user')}
+                                    />
                                 </Form.Group>
                             </Row>
+
                             <Row>
                                 <Form.Group className="mb-3" controlId="matricula_user">
                                     <Form.Label>Matrícula:</Form.Label>
-                                    <Form.Control as='input' type="number" placeholder="Digite a matrícula:" required
+                                    <Form.Control as='input' type="number" placeholder="Digite a sua matrícula:" required
                                         {...register('matricula')} />
                                 </Form.Group>
                             </Row>
 
-                            <Button variant="danger" type="submit" className="me-2" > Enviar </Button>
-                            <Button variant="primary" type="button" onClick={() => reset()}> Limpar </Button>
+
+                            <Button variant="danger" type="submit" className="me-2" >
+                                Enviar
+                            </Button>
+                            <Button variant="primary" type="button"
+                                onClick={() => reset()}>
+                                Limpar
+                            </Button>
                         </Form>
+
                     </Container>
+
                 </Col>
             </Row>
+
         </Container>
+
     )
 }

@@ -35,7 +35,7 @@ export default function Qrcode() {
                             <img className={styles.card_img} src={icone_qr_saida} alt="Icones de Gerar o QRCODE de Saida" />
                         </Link>
                         {/* Botão para Pesquisar Usuario  */}
-                        <Link to='/inicio/Evento_Registro'>
+                        <Link to='/inicio/qrcode/saida'>
                             <Button variant="outline-dark" className={styles.botao} size="lg"> Gerar QRCODE Saída </Button>
                         </Link>
                     </Container>

@@ -23,12 +23,13 @@ import axios from "axios";
 export default function GerarQrcode() {
 
     // Utilizando a bibli oteca userForm
-    const { register, handleSubmit, reset, formState: { errors } } = useForm();
+    const { register, handleSubmit, reset } = useForm();
 
     const [qrcode, setQRCode] = useState('');
 
     const PostDados = async (dados) => {
         console.log(dados)
+        dados.opc = 1
         await toast.promise(
             axiosInstance.post(`/qrcode/gerar`, { dados }),
             {
@@ -40,7 +41,7 @@ export default function GerarQrcode() {
         ).then(response => {
             setQRCode(response.data)
             const dataURL = response.data; // Supondo que a resposta contenha o data URL da imagem
-            const savePath = './qrcode.png'; // Caminho para salvar a imagem localmente
+            const savePath = './'; // Caminho para salvar a imagem localmente
 
             function downloadImage(url, path) {
                 axios.get(url, { responseType: 'arraybuffer' })
@@ -51,7 +52,7 @@ export default function GerarQrcode() {
                         // Cria um link temporário e faz o download do arquivo
                         const link = document.createElement('a');
                         link.href = url;
-                        link.download = 'qrcode.png'; // Nome do arquivo para download
+                        link.download = 'qrcode_entrada.png'; // Nome do arquivo para download
                         document.body.appendChild(link);
                         link.click();
 
@@ -64,8 +65,6 @@ export default function GerarQrcode() {
             }
             // Chamar a função para fazer o download e salvar a imagem
             downloadImage(dataURL, savePath);
-
-
         })
             .catch((err) => {
                 console.error("ops! ocorreu um erro na requisição" + err);
@@ -81,9 +80,9 @@ export default function GerarQrcode() {
             </Row>
             <Row>
                 <Col className={styles.caixa_secundaria_2}>
-                    <ToastContainer></ToastContainer>
+                    <ToastContainer pauseOnFocusLoss={false}></ToastContainer>
                     <Container className={styles.caixa_terciaria_2} >
-                        <Container className={`${styles.caixa_form} ${' bg-dark'}`}>
+                        <Container className={`${styles.caixa_form} ${' bg-dark rounded'}`}>
                             <Form onSubmit={handleSubmit(PostDados)}>
 
                                 <Form.Group className="mb-3" controlId="id_evento">
@@ -91,7 +90,6 @@ export default function GerarQrcode() {
                                     <Form.Control as='input' type="number" placeholder="Digite o ID do evento:" required
                                         {...register('id_evento')} />
                                 </Form.Group>
-                                <ErrorMessage errors={errors} name="id_evento" />
 
                                 <Button variant="danger" type="submit" className="me-2" > Enviar </Button>
                                 <Button variant="primary" type="button" onClick={() => reset()} > Limpar </Button>
@@ -107,10 +105,10 @@ export default function GerarQrcode() {
                             </div>
                         </Col>
                         <Col>
-                            <Container className={styles.caixa_terciaria_4} >
+                            <Container  >
                                 {
-                                    <Container>
-                                        {qrcode && <img src={qrcode} alt="QR Code" />}
+                                    <Container className={`${styles.caixa_terciaria_4} ${'rounded'}`}>
+                                        {qrcode && <img src={qrcode} className={styles.qr_img} alt="QR Code" />}
                                     </Container>
                                 }
                             </Container>

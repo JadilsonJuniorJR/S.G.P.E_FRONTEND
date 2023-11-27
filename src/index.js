@@ -14,7 +14,8 @@ import EventoCadastrar from './pages/Eventos/Evento_Cadastrar.jsx';
 import EventosOpcoes from "./pages/Eventos/Evento_Principal"
 import EventoRegistro from './pages/Eventos/Evento_Registro.jsx';
 import EventoLista from './pages/Eventos/Evento_Lista.jsx'
-import Evento_Lista_Pesquisar from './pages/Eventos/Evento_Lista_Pesquisar.jsx';
+import Evento_Lista_Pesquisar from './pages/Eventos/Evento_Lista_Participante.jsx';
+import Evento_Lista_Evento from './pages/Eventos/Evento_Lista_Evento.jsx'
 
 import Qrcode from "./pages/QrCode/Index_qrcode.jsx"
 import QrcodeGerar from "./pages/QrCode/GerarQrcode.jsx"
@@ -22,6 +23,8 @@ import QrcodeSaida from './pages/QrCode/Qrcode_saida.jsx'
 
 import CadastrarUsuario from './pages/Usuarios/cadastrar_usuarios.jsx';
 import ConfirmarUsuario from './pages/Usuarios/confirmar_usuario';
+import InscricaoParticipante from './pages/Usuarios/inscricao_participante.jsx';
+import ConfirmacaoParticipacao from './pages/Usuarios/confirmacao_participacao.jsx';
 
 
 // CONJUNTO DE ROTAS DO SITE
@@ -76,6 +79,10 @@ const rotas = createBrowserRouter([
         element: <Evento_Lista_Pesquisar/>
       },
       {
+        path: "/inicio/evento_lista_evento",
+        element: <Evento_Lista_Evento/>
+      },
+      {
         path: "/inicio/Cadastrar_usuario",
         element: <CadastrarUsuario />
       },
@@ -85,6 +92,14 @@ const rotas = createBrowserRouter([
       }
     ]
   },
+  {
+    path: "/inicio/inscricao_participante",
+    element: <InscricaoParticipante />
+  },
+  {
+    path: "/inicio/confirmacao_participante",
+    element: < ConfirmacaoParticipacao/>
+  }
 
 ])
 

@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     width: 70vw;
-    height: 70vh;
+    height: 100vh;
 }
 
 .linha_formulario {
@@ -42,7 +42,7 @@
 /*Style Evento Principal */
 
 .caixa_principal {
-    height: 60vh;
+    height: 70vh;
     width: 60vw;
     display: flex;
     align-items: center;
@@ -56,7 +56,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 27vh;
+    height: 30vh;
     padding: 5px;
     border: 1px solid #F00;
 }
@@ -102,9 +102,9 @@
     padding-bottom: 5%;
 }
 
-/* Evento Listar Pesquisar */
+ /* Style Gerar lista Participante */
 
-.caixa_qrcode_2 {
+.evento_pesquisar {
     height: 60vh;
     width: 60vw;
     display: flex;
@@ -125,63 +125,33 @@
 }
 
 
-.caixa_titulo_2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 5vh;
-
-    border: 1px solid #8000ff;
-}
-
 .caixa_secundaria_2 {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
     border: 1px solid #8000ff;
 }
 
 .caixa_terciaria_2 {
     display: flex;
     align-items: center;
-    justify-content: stretch;
+    justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 60%;
+    height: 40vh;
     border: 1px solid aqua;
 }
 
-.caixa_terciaria_3 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    height: 80%;
-    border: 1px solid rgb(255, 217, 0);
-}
-
-.caixa_terciaria_4 {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    border: 1px solid rgb(255, 0, 242);
-}
 
 .caixa_form {
     display: flex;
     align-items: center;
     justify-content: center;
     color: #FFF;
-    
     max-width: 350px;
     max-height: 350px;
-    height: 35vh;
-    border-radius: 5%;
+    height: 30vh;
 }
 
 
@@ -190,7 +160,6 @@
 
     /* Style Evento Cadastrar */
     .caixa_cadastrar {
-        display: flex;
         width: 100vw;
         height: 100vh;
     }
@@ -202,7 +171,7 @@
     }
 
     .caixa_interna {
-        height: 90vh;
+        height: 91vh;
         max-width: 600px;
     }
 
@@ -246,6 +215,26 @@
 
     .caixa_secundaria {
         height: 30vh;
+    }
+
+    /* Style Gerar lista Participante */
+
+    .evento_pesquisar {
+        height: 100vh;
+        width: 100vw;
+    }
+    
+    .caixa_secundaria_2 {
+        height: 69vh;
+    }
+    
+    .caixa_terciaria_2 {
+        height: 40vh;
+    }
+    
+    .caixa_form {
+        max-width: 350px;
+        height: 40vh;
     }
 
 }

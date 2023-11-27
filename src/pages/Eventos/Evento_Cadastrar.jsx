@@ -78,7 +78,7 @@ export default function Evento_Cadastrar() {
             <Row >
               <Form.Group as={Col} className="mb-3" controlId="nome_evento">
                 <Form.Label>Nome do Evento: </Form.Label>
-                <Form.Control as='input' type="text" placeholder="Digite o nome do Evento:"
+                <Form.Control as='input' type="text" placeholder="Digite o nome do Evento:" required
                   {...register('nome_evento')}
                 />
               </Form.Group>
@@ -125,7 +125,7 @@ export default function Evento_Cadastrar() {
 
             <Form.Group className="mb-3" controlId="descricao">
               <Form.Label>Descrição do Evento:</Form.Label>
-              <Form.Control as='textarea' type="text" rows={3}
+              <Form.Control as='textarea' type="text" rows={2}
                 {...register('descricao')} />
             </Form.Group>
 

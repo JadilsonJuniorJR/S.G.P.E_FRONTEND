@@ -1,38 +1,69 @@
-/* .caixa_secundaria,
-.caixa_secundaria_ {
-    height: 100vh;
-    width: 60vw;
-    padding: 0px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: #ffffff;
-} */
-
-.caixa_secundaria_2 {
-    height: 60vh;
-    width: 40vw;
-}
-
-
-.form_tamanho {
-    resize: both;
-}
-
-
-
-/* Style Formulario de Inscrição */
-
-.caixa_cadastrar {
+.formulario_confirmacao {
     display: flex;
     width: 70vw;
-    height: 80vh;
+    height: 70vh;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     border: 1px solid #0F0;
 }
 
+.caixa_secundaria_2 {
+    height: 60vh;
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #F00;
+}
+
+/* Formulario Confirma Participante */
+
+.confirma_participacao {
+    display: flex;
+    width: 70vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid #0F0;
+}
+
+.caixa_secundaria_participacao {
+    height: 70vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #F00;
+}
+
+.caixa_interna_2_participacao {
+    color: #FFF;
+    max-width: 400px;
+    height: auto;
+}
+
+
+
+.caixa_interna_2 {
+    color: #FFF;
+    max-width: 400px;
+    height: auto;
+}
+
+
+/* Style Formulario de Inscrição */
+.caixa_cadastrar {
+    display: flex;
+    width: 70vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid #0F0;
+}
 
 .caixa_secundaria {
     display: flex;
@@ -40,7 +71,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
     padding: 5px;
     border: 1px solid #F00;
 }
@@ -48,12 +78,14 @@
 .caixa_interna {
     color: #FFF;
     max-width: 768px;
-
+    height: auto;
 }
 
 @media (max-width: 426px) {
 
-    .caixa_cadastrar{
+    /* Formulario de Cadastro */
+
+    .caixa_cadastrar {
         width: 100vw;
         height: 100vh;
     }
@@ -62,9 +94,37 @@
         width: 90vw;
     }
 
-    .caixa_secundaria_2 {
-        width: 90vw;
+    .caixa_interna {
+        height: 90vh;
+    }
+
+    /* Formulario de Confirmação */
+    .formulario_confirmacao {
+        width: 100vw;
         height: 100vh;
         justify-content: space-evenly;
     }
+
+    .caixa_interna_2 {
+        height: 50vh;
+    }
+
+    .caixa_secundaria_2 {
+        width: 90vw;
+        height: 60vh;
+    }
+
+    /* Formulario Confirma Participante */
+
+    .confirma_participacao {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .caixa_secundaria_participacao {
+        height: 80vh;
+        width: 90vw;
+        border: 1px solid #F00;
+    }
+
 }

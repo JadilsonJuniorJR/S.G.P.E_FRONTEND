@@ -175,7 +175,7 @@
 
 
 
-/* Style QRCODE GERAR ENTRADA */
+/* Style QRCODE GERAR ENTRADA E SAIDA*/
 
 .caixa_qrcode_2 {
     height: 60vh;
@@ -222,7 +222,8 @@
     justify-content: stretch;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 60%;
+    height: 70%;
+    width: 50vh;
     border: 1px solid aqua;
 }
 
@@ -232,7 +233,9 @@
     justify-content: center;
     flex-direction: column;
     flex-wrap: nowrap;
-    height: 80%;
+    height: 100%;
+    background-color: #212529;
+    color: #FFF;
     border: 1px solid rgb(255, 217, 0);
 }
 
@@ -242,7 +245,15 @@
     justify-content: space-evenly;
     flex-direction: column;
     flex-wrap: nowrap;
+    width: 20vw;
+    height: 25vh;
+    background-color: #212529;
     border: 1px solid rgb(255, 0, 242);
+}
+
+.qr_img {
+    width: 150px;
+
 }
 
 .caixa_form {
@@ -250,7 +261,7 @@
     align-items: center;
     justify-content: center;
     color: #FFF;
-    
+
     max-width: 350px;
     max-height: 350px;
     height: 35vh;
@@ -258,12 +269,52 @@
 }
 
 
+
+@media (max-width:768px) {
+
+    .caixa_qrcode_2 {
+        height: 100vh;
+        width: 70vw;
+    }
+
+    /* Style QRCODE GERAR ENTRADA */
+    .caixa_secundaria_2 {
+        border: 1px solid #800040;
+    }
+
+    .caixa_terciaria_2 {
+        height: 90%;
+    }
+
+    .caixa_terciaria_3 {
+        height: 35vh;
+        width: auto;
+        border: 1px solid rgb(255, 217, 0);
+    }
+
+    .caixa_terciaria_4 {
+        width: 35vw;
+        height: 27vh;
+        background-color: #212529;
+    }
+
+    .qr_img {
+        width: 150px;
+    }
+
+    .caixa_form {
+        width: 35vw;
+        height: 25vh;
+    }
+}
+
 @media (max-width: 426px) {
 
-    .caixa_qrcode{
+    .caixa_qrcode {
         height: 100vh;
         width: 100vw;
         justify-content: space-evenly;
+        color: 1px solid #808000;
     }
 
     /* Style QRCODE Principal */
@@ -281,10 +332,6 @@
 
     /* Style QRCODE GERAR ENTRADA */
     .caixa_secundaria_2 {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
 
         border: 1px solid #800040;
     }
@@ -295,16 +342,30 @@
         justify-content: center;
         flex-direction: column;
         flex-wrap: nowrap;
-        height: 25vh;
+        height: 40vh;
         border: 1px solid rgb(255, 217, 0);
     }
 
-    .caixa_form {
-        display: flex;
-        align-items: center;
+    .caixa_terciaria_2 {
+        height: 90%;
+        border: 1px solid aqua;
+    }
+
+    .caixa_terciaria_4 {
+        width: 60vw;
+        height: 32vh;
         justify-content: center;
-        color: #FFF;
-        width: 80vw;
+        flex-direction: row;
+        background-color: #212529;
+
+    }
+
+    .qr_img {
+        width: 150px;
+    }
+
+    .caixa_form {
+        width: 60vw;
         height: 35vh;
     }
 }

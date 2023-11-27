@@ -7,7 +7,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useForm } from "react-hook-form";
-import { ErrorMessage } from "@hookform/error-message";
 
 // IMPORTANDO ESTILO
 import styles from "./styles.module.css";
@@ -18,11 +17,11 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 export default function Evento_Lista_Pesquisar() {
-    const { register, handleSubmit, reset, formState: { errors } } = useForm();
+    const { register, handleSubmit, reset } = useForm();
     // Função para Enviar a Requisição
     const GetDataEvento = async (dados) => {
         await toast.promise(
-            axiosInstance.get('/evento/listar_evento',{dados}), {
+            axiosInstance.post('/evento/listar_evento',{dados}), {
             pending: 'Enviando ....',
             success: 'Lista De Eventos Gerada !',
             error: 'Erro Lista De Eventos Não Gerada !'
@@ -52,40 +51,43 @@ export default function Evento_Lista_Pesquisar() {
     }
 
     return (
-        <Container className={styles.caixa_qrcode_2}>
+        <Container className={styles.evento_pesquisar}>
             <Row>
                 <Container className={styles.caixa_titulo}>
-                    <h2>Gerar Lista Participante</h2>
+                    <h2>Gerar Lista dos Eventos</h2>
                 </Container>
             </Row>
             <Row>
                 <Col className={styles.caixa_secundaria_2}>
-                    <ToastContainer></ToastContainer>
+                    <ToastContainer pauseOnFocusLoss={false}></ToastContainer>
                     <Container className={styles.caixa_terciaria_2} >
-                        <Container className={`${styles.caixa_form} ${' bg-dark'}`}>
+                        <Container className={`${styles.caixa_form} ${' bg-dark rounded'}`}>
                             <Form onSubmit={handleSubmit(GetDataEvento)}>
 
                                 <Form.Group className="mb-3" controlId="id_evento">
                                     <Form.Label>ID do Evento:</Form.Label>
-                                    <Form.Control as='input' type="number" placeholder="Digite o ID do evento:" required
+                                    <Form.Control as='input' type="number" placeholder="Digite o ID do evento:"  
                                         {...register('id_evento')} />
                                 </Form.Group>
-                                <ErrorMessage errors={errors} name="id_evento" />
 
                                 <div className="mb-3">
-                                    <Form.Check
-                                        inline
-                                        label="Participante *****"
+                                    <Form.Check as='input' 
+                                        required
+                                        label="Evento Específico"
                                         name="opcao"
                                         type='radio'
-                                        id='opcao_1'
+                                        value='1'
+                                        id='radio'
+                                        {...register("radio")}
                                     />
-                                    <Form.Check
-                                        inline
-                                        label="Partipante Geral"
+                                    <Form.Check as='input'
+                                        
+                                        label="Todos os Eventos"
                                         name="opcao"
                                         type='radio'
-                                        id='opcao_2'
+                                        value='2'
+                                        id='radio2'
+                                        {...register("radio")}
                                     />
                                 </div>
 
