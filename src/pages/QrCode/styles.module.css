@@ -1,126 +1,3 @@
-/* .caixa_primaria,
-.caixa_secundaria,
-.caixa_terciaria,
-.linha_1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.caixa_primaria {
-    width: 70vh;
-    justify-content: flex-start;
-    box-sizing: border-box;
-    border: 1px solid #0F0; 
-}
-
-.caixa_secundaria {
-    height: 10vh;
-    justify-content: center;
-     border: 1px solid #F00; 
-}
-
-.linha_1 {
-    width: 100%;
-    align-items: flex-start;
-    flex-direction: row;
-    padding: 5px;
-    border: 1px solid #00F; 
-
-}
-
-.coluna_1 {
-    width: 50%;
-    height: 30vh;
-    border: 1px solid #0FF; 
-}
-
-.caixa_terciaria {
-    flex-direction: row;
-    justify-content: center;
-    height: 30vh;
-     border: 1px solid #000;
-}
-
-.painel_qrcode {
-    height: 190px;
-    border: 1px solid #777;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.caixa_interna {
-    color: #FFF;
-    border-radius: 5%;
-    max-width: 768px;
-    min-width: 200px;
-}
-
-
-
-@media (max-width: 768px) {
-
-    .caixa_primaria {
-        width: 65vh;
-    }
-
-    .caixa_terciaria {
-        width: 100%;
-        padding: 0%;
-    }
-
-    .caixa_interna {
-        width: 100%;
-    }
-
-    .linha_1 {
-        flex-direction: row;
-    }
-
-    .painel_qrcode {
-        height: 160px;
-        border: 1px solid #777;
-    }
-
-}
-
-
-@media (max-width: 425px) {
-
-    .caixa_primaria {
-        height: 80vh;
-        width: 100vw;
-        justify-content: center;
-    }
-
-    .coluna_1 {
-        width: 90%;
-        height: 30vh;
-        justify-content: space-between;
-        margin: 10px;
-         border: 1px solid #0FF; 
-    }
-
-    .caixa_terciaria {
-        flex-direction: row;
-        height: 250px;
-    }
-
-    .linha_1 {
-        flex-direction: column;
-    }
-
-    .painel_qrcode {
-        height: 160px;
-        border: 1px solid #777;
-    }
-
-} */
-
-
 
 /*Style QRCODE Principal */
 
@@ -184,7 +61,7 @@
     align-items: stretch;
     justify-content: space-evenly;
     flex-direction: column;
-    border: 1px solid #0F0;
+    /* border: 1px solid #0F0; */
 }
 
 .caixa_titulo {
@@ -194,7 +71,7 @@
     align-items: center;
     height: 10vh;
     padding: 5px;
-    border: 1px solid #8000ff;
+    /* border: 1px solid #8000ff; */
 }
 
 
@@ -204,7 +81,7 @@
     align-items: center;
     height: 5vh;
 
-    border: 1px solid #8000ff;
+    /* border: 1px solid #8000ff; */
 }
 
 .caixa_secundaria_2 {
@@ -213,7 +90,7 @@
     justify-content: center;
     align-items: center;
 
-    border: 1px solid #8000ff;
+    /* border: 1px solid #8000ff; */
 }
 
 .caixa_terciaria_2 {
@@ -224,7 +101,7 @@
     flex-wrap: wrap;
     height: 70%;
     width: 50vh;
-    border: 1px solid aqua;
+    /* border: 1px solid aqua; */
 }
 
 .caixa_terciaria_3 {
@@ -236,7 +113,7 @@
     height: 100%;
     background-color: #212529;
     color: #FFF;
-    border: 1px solid rgb(255, 217, 0);
+    /* border: 1px solid rgb(255, 217, 0); */
 }
 
 .caixa_terciaria_4 {
@@ -248,7 +125,7 @@
     width: 20vw;
     height: 25vh;
     background-color: #212529;
-    border: 1px solid rgb(255, 0, 242);
+    /* border: 1px solid rgb(255, 0, 242); */
 }
 
 .qr_img {
@@ -278,9 +155,9 @@
     }
 
     /* Style QRCODE GERAR ENTRADA */
-    .caixa_secundaria_2 {
+    /* .caixa_secundaria_2 {
         border: 1px solid #800040;
-    }
+    } */
 
     .caixa_terciaria_2 {
         height: 90%;
@@ -289,7 +166,7 @@
     .caixa_terciaria_3 {
         height: 35vh;
         width: auto;
-        border: 1px solid rgb(255, 217, 0);
+        /* border: 1px solid rgb(255, 217, 0); */
     }
 
     .caixa_terciaria_4 {
@@ -314,7 +191,7 @@
         height: 100vh;
         width: 100vw;
         justify-content: space-evenly;
-        color: 1px solid #808000;
+        /* color: 1px solid #808000; */
     }
 
     /* Style QRCODE Principal */
@@ -331,10 +208,10 @@
     }
 
     /* Style QRCODE GERAR ENTRADA */
-    .caixa_secundaria_2 {
+    /* .caixa_secundaria_2 {
 
         border: 1px solid #800040;
-    }
+    } */
 
     .caixa_terciaria_3 {
         display: flex;
@@ -343,12 +220,12 @@
         flex-direction: column;
         flex-wrap: nowrap;
         height: 40vh;
-        border: 1px solid rgb(255, 217, 0);
+        /* border: 1px solid rgb(255, 217, 0); */
     }
 
     .caixa_terciaria_2 {
         height: 90%;
-        border: 1px solid aqua;
+        /* border: 1px solid aqua; */
     }
 
     .caixa_terciaria_4 {
@@ -357,7 +234,6 @@
         justify-content: center;
         flex-direction: row;
         background-color: #212529;
-
     }
 
     .qr_img {

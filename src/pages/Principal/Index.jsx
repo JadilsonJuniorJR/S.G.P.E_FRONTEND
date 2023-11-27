@@ -68,7 +68,7 @@ export default function Principal() {
                         </Nav.Link>
                         {/* Botão para Evento  */}
                         <Link to='/inicio/Cadastrar_usuario'>
-                            <Button variant="outline-dark" className={`${styles.botao} `} size="lg"> Confirma entrada de Participante </Button>
+                            <Button variant="outline-dark" className={`${styles.botao} `} size="lg"> Confirma Entrada do Participante </Button>
                         </Link>
 
                     </Container>

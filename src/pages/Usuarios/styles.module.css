@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border: 1px solid #0F0;
+    /* border: 1px solid #0F0; */
 }
 
 .caixa_secundaria_2 {
@@ -14,7 +14,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #F00;
+    /* border: 1px solid #F00; */
 }
 
 /* Formulario Confirma Participante */
@@ -26,7 +26,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border: 1px solid #0F0;
+    /* border: 1px solid #0F0; */
 }
 
 .caixa_secundaria_participacao {
@@ -36,7 +36,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: 1px solid #F00;
+    /* border: 1px solid #F00; */
 }
 
 .caixa_interna_2_participacao {
@@ -44,8 +44,6 @@
     max-width: 400px;
     height: auto;
 }
-
-
 
 .caixa_interna_2 {
     color: #FFF;
@@ -62,7 +60,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border: 1px solid #0F0;
+    /* border: 1px solid #0F0; */
 }
 
 .caixa_secundaria {
@@ -72,7 +70,7 @@
     justify-content: center;
     align-items: center;
     padding: 5px;
-    border: 1px solid #F00;
+    /* border: 1px solid #F00; */
 }
 
 .caixa_interna {
@@ -124,7 +122,7 @@
     .caixa_secundaria_participacao {
         height: 80vh;
         width: 90vw;
-        border: 1px solid #F00;
+        /* border: 1px solid #F00; */
     }
 
 }

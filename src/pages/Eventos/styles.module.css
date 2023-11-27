@@ -29,7 +29,7 @@
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    border: 1px solid cornflowerblue;
+    /* border: 1px solid cornflowerblue; */
 }
 
 .tabela {
@@ -48,7 +48,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border: 1px solid #0F0;
+    /* border: 1px solid #0F0; */
 }
 
 .caixa_secundaria {
@@ -58,7 +58,7 @@
     align-items: center;
     height: 30vh;
     padding: 5px;
-    border: 1px solid #F00;
+    /* border: 1px solid #F00; */
 }
 
 .caixa_terciaria {
@@ -68,7 +68,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     height: 90%;
-    border: 1px solid aqua;
+    /* border: 1px solid aqua; */
 }
 
 .links {
@@ -78,7 +78,7 @@
     align-items: center;
     flex-wrap: nowrap;
     margin-bottom: 5px;
-    border: 1px solid #F0F;
+    /* border: 1px solid #F0F; */
 }
 
 .botao {
@@ -94,7 +94,7 @@
     flex-direction: column;
     height: 60vh;
     width: 60vw;
-    border: 1px solid #F0F;
+    /* border: 1px solid #F0F; */
 }
 
 .card_img {
@@ -111,7 +111,7 @@
     align-items: stretch;
     justify-content: space-evenly;
     flex-direction: column;
-    border: 1px solid #0F0;
+    /* border: 1px solid #0F0; */
 }
 
 .caixa_titulo {
@@ -121,7 +121,7 @@
     align-items: center;
     height: 10vh;
     padding: 5px;
-    border: 1px solid #8000ff;
+    /* border: 1px solid #8000ff; */
 }
 
 
@@ -130,7 +130,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border: 1px solid #8000ff;
+    /* border: 1px solid #8000ff; */
 }
 
 .caixa_terciaria_2 {
@@ -140,7 +140,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     height: 40vh;
-    border: 1px solid aqua;
+    /* border: 1px solid aqua; */
 }
 
 
@@ -180,7 +180,7 @@
         width: 100vw;
         height: 100vh;
         justify-content: space-evenly;
-        border: 1px solid cornflowerblue;
+        /* border: 1px solid cornflowerblue; */
     }
 
     .tabela {
