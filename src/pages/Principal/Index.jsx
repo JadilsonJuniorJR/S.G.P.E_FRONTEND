@@ -33,7 +33,7 @@ export default function Principal() {
                     <Container className={`${styles.caixa}`}>
 
                         {/* Icone com Link */}
-                        <Link to='/inicio/qrcode'  className={`${styles.links}`} >
+                        <Link to='/inicio/qrcode' className={`${styles.links}`} >
                             <img className={styles.card_img} src={icone_qrcode} alt="Icone de Gerar QRCODE" />
                         </Link>
                         {/* Botão para Pesquisar Usuario  */}

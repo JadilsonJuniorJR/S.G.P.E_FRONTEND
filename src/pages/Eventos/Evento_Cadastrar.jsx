@@ -1,5 +1,4 @@
 // IMPORTANDO BIBLIOTECAS
-import axios from "axios"
 import { Container, Row, Col } from "react-bootstrap";
 
 // IMPORTANDO ROTAS
@@ -9,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useForm } from "react-hook-form";
+import axiosInstance from "../../axios/axiosInstance";
 
 // IMPORTANDO ESTILO
 // import logo from "../../assets/icone_evento.png"
@@ -22,33 +22,17 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 export default function Evento_Cadastrar() {
-
-
   // Utilizando a biblioteca userForm
   const { register, handleSubmit, reset } = useForm();
 
   // Utilizando navegações entre rotas
   const navigate = useNavigate()
 
-  // Função para limpar campo de formulario
-  const limparForm = (e) => {
-    reset({
-      nome_evento: '',
-      // organizador: '',
-      data_inicio: '',
-      hora_inicio: '',
-      data_termino: '',
-      hora_termino: '',
-      tolerancia: '',
-      descricao: ''
-    })
-  }
-
   // REALIZANDO POST PARA O SERVIDOR
   const postData = async (evento) => {
     console.log(evento)
     await toast.promise(
-      axios.post("http://localhost:8080/evento/cadastrar_evento", { evento }), {
+      axiosInstance.post("/evento/cadastrar_evento", { evento }), {
       pending: 'Enviando ....',
       success: 'Evento Registrado',
       error: 'Evento não Registrado'
@@ -71,7 +55,7 @@ export default function Evento_Cadastrar() {
       </Row>
 
       <Row className={` ${styles.linha_formulario}`}>
-        <ToastContainer></ToastContainer>
+        <ToastContainer pauseOnFocusLoss={false}></ToastContainer>
 
         <Container className={` ${styles.caixa_interna} ${'  p-4 bg-dark rounded'}`}>
           <Form onSubmit={handleSubmit(postData)} >
@@ -130,7 +114,7 @@ export default function Evento_Cadastrar() {
             </Form.Group>
 
             <Button variant="danger" type="submit" className="me-2" > Enviar </Button>
-            <Button variant="primary" type="button" onClick={limparForm} > Limpar </Button>
+            <Button variant="primary" type="button" onClick={() => reset()} > Limpar </Button>
           </Form>
         </Container>
       </Row>

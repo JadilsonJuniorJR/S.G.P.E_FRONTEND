@@ -10,7 +10,6 @@ import { useNavigate } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useForm } from "react-hook-form";
-import { ErrorMessage } from "@hookform/error-message";
 
 // IMPORTANDO ESTILO
 import styles from "./styles.module.css";
@@ -24,7 +23,7 @@ import 'react-toastify/dist/ReactToastify.css';
 export default function FormularioSaida() {
 
     // Utilizando a biblioteca userForm
-    const { register, handleSubmit, reset, formState: { errors } } = useForm();
+    const { register, handleSubmit, reset } = useForm();
 
     // Utilizando navegações entre rotas
     const navigate = useNavigate()

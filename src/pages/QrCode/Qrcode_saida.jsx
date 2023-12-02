@@ -41,7 +41,7 @@ export default function QrcodeSaida() {
             setQRCode(response.data)
             const dataURL = response.data; // Supondo que a resposta contenha o data URL da imagem
             const savePath = './'; // Caminho para salvar a imagem localmente
-             // Função para fazer o download e salvar a imagem
+            // Função para fazer o download e salvar a imagem
             const BaixarIMG = (url, path) => {
                 axios.get(url, { responseType: 'arraybuffer' })
                     .then((response) => {
@@ -106,7 +106,7 @@ export default function QrcodeSaida() {
 
                         </Col>
                         <Col>
-                            <Container className={ `${styles.caixa_terciaria_4} ${'rounded'}`} >
+                            <Container className={`${styles.caixa_terciaria_4} ${'rounded'}`} >
                                 {
                                     <>
                                         {qrcode && <img src={qrcode} className={styles.qr_img} alt="QR Code" />}

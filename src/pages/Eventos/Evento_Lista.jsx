@@ -1,13 +1,8 @@
-
 // IMPORTANDO BIBLIOTECAS
 import React from "react";
-import axiosInstance from "../../axios/axiosInstance";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
-
-
-import { Nav } from "react-bootstrap";
 
 
 // IMPORTANDO ESTILO
@@ -16,14 +11,9 @@ import styles from "./styles.module.css";
 // Icones
 import icone_listas_evento from "../../assets/gerar_lista_evento.png"
 import icone_listas_usuario from "../../assets/gerar_lista_usuario.png"
-// Notificação
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
 
 
 function Evento_Lista() {
-
 
     return (
         <Container className={` ${styles.caixa_lista}`}>
@@ -31,7 +21,6 @@ function Evento_Lista() {
                 <h2>Listas do Evento</h2>
             </Row>
             <Row>
-                <ToastContainer></ToastContainer>
 
                 <Col className={styles.caixa_secundaria} >
                     <Container className={styles.caixa_terciaria}>
@@ -58,9 +47,7 @@ function Evento_Lista() {
                     </Container>
                 </Col>
             </Row>
-
         </Container >
-
     )
 }
 
