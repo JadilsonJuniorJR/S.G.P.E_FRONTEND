@@ -1,6 +1,5 @@
 import Cabecalho from "./components/cabecalho/Index";
 import BarraLateral from "./components/BarraLateral/Index";
-import { Container } from "react-bootstrap";
 
 // COMPONENTE DE REDERIZAÇÃO PRINCIPAL
 
