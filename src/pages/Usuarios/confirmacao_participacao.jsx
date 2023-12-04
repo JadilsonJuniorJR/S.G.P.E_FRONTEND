@@ -10,7 +10,6 @@ import { useNavigate } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useForm } from "react-hook-form";
-import { ErrorMessage } from "@hookform/error-message";
 
 // IMPORTANDO ESTILO
 import styles from "./styles.module.css";
