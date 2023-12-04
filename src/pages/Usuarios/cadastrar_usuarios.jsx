@@ -65,7 +65,7 @@ export default function Cadastrar_usuario() {
             </Row>
             <Row>
                 <Col className={` ${styles.caixa_secundaria}`}>
-                    <ToastContainer></ToastContainer>
+                    <ToastContainer pauseOnFocusLoss={false}></ToastContainer>
 
                     <Container fluid className={` ${styles.caixa_interna} ${' p-4 bg-dark rounded'}`}>
                         <Form onSubmit={handleSubmit(postData)} className={styles.caixa_form}>

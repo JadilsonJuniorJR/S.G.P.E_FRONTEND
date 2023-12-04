@@ -7,15 +7,16 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
 // IMPORTANDO CAMINHO DAS ROTAS
 import App from './App.js'
-import Login from "./pages/Signin/Index";
+
+import Login from './pages/Login/Index.jsx';
 import Principal from './pages/Principal/Index.jsx';
 
 import EventoCadastrar from './pages/Eventos/Evento_Cadastrar.jsx';
 import EventosOpcoes from "./pages/Eventos/Evento_Principal"
 import EventoRegistro from './pages/Eventos/Evento_Registro.jsx';
 import EventoLista from './pages/Eventos/Evento_Lista.jsx'
-import Evento_Lista_Pesquisar from './pages/Eventos/Evento_Lista_Participante.jsx';
-import Evento_Lista_Evento from './pages/Eventos/Evento_Lista_Evento.jsx'
+import EventoListaPesquisar from './pages/Eventos/Evento_Lista_Participante.jsx';
+import EventoListaEvento from './pages/Eventos/Evento_Lista_Evento.jsx'
 
 import Qrcode from "./pages/QrCode/Index_qrcode.jsx"
 import QrcodeGerar from "./pages/QrCode/GerarQrcode.jsx"
@@ -76,11 +77,11 @@ const rotas = createBrowserRouter([
       },
       {
         path: "/inicio/evento_lista_pesquisa",
-        element: <Evento_Lista_Pesquisar/>
+        element: <EventoListaPesquisar />
       },
       {
         path: "/inicio/evento_lista_evento",
-        element: <Evento_Lista_Evento/>
+        element: <EventoListaEvento />
       },
       {
         path: "/inicio/Cadastrar_usuario",
@@ -98,7 +99,7 @@ const rotas = createBrowserRouter([
   },
   {
     path: "/inicio/confirmacao_participante",
-    element: < ConfirmacaoParticipacao/>
+    element: < ConfirmacaoParticipacao />
   }
 
 ])
@@ -109,5 +110,5 @@ root.render(
   <React.StrictMode>
     <RouterProvider router={rotas} />
   </React.StrictMode>
-);
 
+);

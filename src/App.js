@@ -1,6 +1,5 @@
 import Cabecalho from "./components/cabecalho/Index";
 import BarraLateral from "./components/BarraLateral/Index";
-import Rodape from "./components/Rodape/Index";
 import { Container } from "react-bootstrap";
 
 // COMPONENTE DE REDERIZAÇÃO PRINCIPAL
@@ -13,7 +12,7 @@ function App() {
       {/* RENDERIZANDO A BARRA LATERAL QUE ACOPLA O MENU PRINCIPAL */}
       <BarraLateral />
 
-      {/* <Rodape /> */}
+
     </>
   );
 }
