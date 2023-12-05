@@ -4,7 +4,7 @@ import axios from "axios"
 
 const axiosInstance = axios.create({
     // baseURL: "http://localhost:3001",
-    baseURL: "https://s-g-p-e-backend.vercel.app/"
+    baseURL: "https://sleepy-dog-leg-warmers.cyclic.app/"
 });
 
 export default axiosInstance;
