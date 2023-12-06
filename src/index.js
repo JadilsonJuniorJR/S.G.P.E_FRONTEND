@@ -33,12 +33,6 @@ const rotas = createBrowserRouter([
   {
     path: '/',
     element: <Login />,
-    children: [
-      {
-        path: "/inscricao_participante",
-        element: <InscricaoParticipante />
-      }
-    ]
   },
   {
     path: "/inicio",
@@ -99,7 +93,10 @@ const rotas = createBrowserRouter([
       }
     ]
   },
-
+  {
+    path: "/inicio/inscricao_participante",
+    element: <InscricaoParticipante />
+  },
   {
     path: "/inicio/confirmacao_participante",
     element: < ConfirmacaoParticipacao />
