@@ -33,6 +33,7 @@ export default function Inscricao_Participante() {
     const searchParams = new URLSearchParams(location.search);
     const id = searchParams.get("id");
 
+    console.log(id)
 
     const postData = async (dados) => {
         dados.id_evento = id
