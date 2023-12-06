@@ -35,7 +35,7 @@ const rotas = createBrowserRouter([
     element: <Login />,
     children: [
       {
-        path: "/inicio/inscricao_participante",
+        path: "/inscricao_participante",
         element: <InscricaoParticipante />
       }
     ]
