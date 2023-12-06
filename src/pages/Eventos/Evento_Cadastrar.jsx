@@ -69,14 +69,14 @@ export default function Evento_Cadastrar() {
             </Row>
 
             <Row>
-              <Form.Group as={Col} className="mb-3" controlId="descricao">
+              <Form.Group as={Col} className="mb-3" controlId="descricao" required>
                 <Form.Label>Data do Inicio:</Form.Label>
 
                 <Form.Control as='input' type="date"
                   {...register('data_inicio')} />
               </Form.Group>
 
-              <Form.Group as={Col} controlId="formGridState">
+              <Form.Group as={Col} controlId="formGridState" required>
                 <Form.Label>Hora inicial </Form.Label>
                 <Form.Control as='input' type="time"
                   {...register('hora_inicio')} />
@@ -85,14 +85,14 @@ export default function Evento_Cadastrar() {
             </Row>
 
             <Row >
-              <Form.Group as={Col} className="mb-3" controlId="descricao">
+              <Form.Group as={Col} className="mb-3" controlId="descricao" required>
                 <Form.Label>Data do Termino :</Form.Label>
 
                 <Form.Control as='input' type="date"
                   {...register('data_termino')} />
               </Form.Group>
 
-              <Form.Group as={Col} controlId="formGridState">
+              <Form.Group as={Col} controlId="formGridState" required>
                 <Form.Label>Hora do Termino </Form.Label>
                 <Form.Control as='input' type="time"
                   {...register('hora_termino')} />
