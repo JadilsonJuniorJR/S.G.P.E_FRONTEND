@@ -32,7 +32,13 @@ import ConfirmacaoParticipacao from './pages/Usuarios/confirmacao_participacao.j
 const rotas = createBrowserRouter([
   {
     path: '/',
-    element: <Login />
+    element: <Login />,
+    children: [
+      {
+        path: "/inicio/inscricao_participante",
+        element: <InscricaoParticipante />
+      }
+    ]
   },
   {
     path: "/inicio",
@@ -93,10 +99,7 @@ const rotas = createBrowserRouter([
       }
     ]
   },
-  {
-    path: "/inicio/inscricao_participante",
-    element: <InscricaoParticipante />
-  },
+
   {
     path: "/inicio/confirmacao_participante",
     element: < ConfirmacaoParticipacao />
