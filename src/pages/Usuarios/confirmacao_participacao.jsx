@@ -33,8 +33,8 @@ export default function Confirmacao_Participacao() {
             axiosInstance.put(`/participante/confirmar/${dados.nome_user}/${dados.matricula}`),
             {
                 pending: 'Enviando ....',
-                success: 'Participante registrado !',
-                error: 'Participante não registrado no sistema !'
+                success: 'Saida Registrado !',
+                error: 'Saida não registrado no sistema !'
             }
 
         ).then(response => {

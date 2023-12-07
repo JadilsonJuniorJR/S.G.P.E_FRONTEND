@@ -40,7 +40,7 @@ export default function Evento_Cadastrar() {
       .then(response => {
         console.log(response.status + " Evento enviado")
         // REALIZANDO ESPERA PARA REDIRECIONAMENTO DE PAGINA
-        setTimeout(() => { return navigate("/inicio") }, 5000)
+        setTimeout(() => { return navigate("/inicio") }, 2000)
       })
       .catch((err) => {
         console.error("ops! ocorreu um erro" + err);
