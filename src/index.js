@@ -91,6 +91,10 @@ const rotas = createBrowserRouter([
       {
         path: "/inicio/confirmar_presenca",
         element: <ConfirmarUsuario />
+      },
+      {
+        path: "/inicio/sobre",
+        element: <SobreInicio />
       }
     ]
   },
@@ -101,12 +105,7 @@ const rotas = createBrowserRouter([
   {
     path: "/inicio/confirmacao_participante",
     element: < ConfirmacaoParticipacao />
-  },
-  {
-    path: "/inicio/sobre",
-    element: <SobreInicio />
   }
-
 ])
 
 
