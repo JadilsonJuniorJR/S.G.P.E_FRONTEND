@@ -49,7 +49,7 @@ export default function Cadastrar_usuario() {
         })
             .then(response => {
                 console.log(response.status + " Usuario enviado")
-                setTimeout(() => { return navigate("/inicio") }, 4000)
+                setTimeout(() => { return navigate("/inicio") }, 2000)
             })
             .catch((err) => {
                 // toast({error: 'Cadastro não Registrado !'})
