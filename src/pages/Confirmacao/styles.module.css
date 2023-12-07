@@ -1,0 +1,40 @@
+/*Style Evento Principal */
+.caixa_lista {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 80vw;
+}
+
+.caixa_terciaria {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 30vw;
+    height: 40vh;
+    background-color: #2F9E41;
+    color: #FFF;
+}
+
+
+@media (max-width: 426px) {
+
+    /* Evento Lista */
+    .caixa_lista {
+        height: 100vh;
+        width: 100vw;
+        background-color: #FFF;
+    }
+
+    .caixa_terciaria {
+        justify-content: center;
+        width: 70vw;
+        height: 50vh;
+        background-color: #2F9E41;
+    }
+
+}

@@ -27,8 +27,11 @@ import ConfirmarUsuario from './pages/Usuarios/confirmar_usuario';
 import InscricaoParticipante from './pages/Usuarios/inscricao_participante.jsx';
 import ConfirmacaoParticipacao from './pages/Usuarios/confirmacao_participacao.jsx';
 
+import TelaConfirmacaoRegistro from './pages/Confirmacao/tela_confirmacao.jsx';
+import TelaConfirmacaoParticicao from './pages/Confirmacao/tela_confirmacao_presencia.jsx';
+
 import SobreInicio from './pages/Sobre/index.jsx'
-import TelaConfirmacao from './pages/Confirmacao/tela_confirmacao.jsx';
+
 // CONJUNTO DE ROTAS DO SITE
 const rotas = createBrowserRouter([
   {
@@ -107,8 +110,12 @@ const rotas = createBrowserRouter([
     element: < ConfirmacaoParticipacao />
   },
   {
-    path: "/tela_confirmacao",
-    element: <TelaConfirmacao />
+    path: "/confirmacao_registro",
+    element: <TelaConfirmacaoRegistro />
+  },
+  {
+    path: "/confirmacao_presenca",
+    element: <TelaConfirmacaoParticicao />
   }
 ])
 

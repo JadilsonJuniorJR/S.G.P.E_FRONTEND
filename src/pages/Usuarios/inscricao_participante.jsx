@@ -46,7 +46,7 @@ export default function Inscricao_Participante() {
         })
             .then(response => {
                 console.log(response.status + " Usuario enviado")
-                setTimeout(() => { return navigate("/inicio") }, 4000)
+                setTimeout(() => { return navigate("/tela_confirmacao") }, 2000)
             })
             .catch((err) => {
                 // toast({error: 'Cadastro não Registrado !'})
@@ -68,7 +68,7 @@ export default function Inscricao_Participante() {
                             <Row>
                                 <Form.Group className="mb-3" controlId="nome_user">
                                     <Form.Label>Nome: </Form.Label>
-                                    <Form.Control as='input' type="text" placeholder="Digite o seu nome:"
+                                    <Form.Control as='input' type="text" placeholder="Digite o seu nome:" required
                                         {...register('nome_user')}
                                     />
                                 </Form.Group>
