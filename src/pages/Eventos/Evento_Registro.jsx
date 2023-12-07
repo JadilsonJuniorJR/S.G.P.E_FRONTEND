@@ -57,8 +57,8 @@ export default function Evento_Registro() {
                                         <td key={registro.id_evento}> {registro.id_evento}</td>
                                         <td> {registro.nome_evento}</td>
                                         <td> {registro.fk_id_adm}</td>
-                                        <td> {moment.utc(registro.data_inicio).format('DD-MM-YYYY')}</td>
-                                        <td> {moment(registro.data_termino).format('DD-MM-YYYY')}</td>
+                                        <td> {moment.utc(registro.data_inicio).format('DD/MM/YYYY')}</td>
+                                        <td> {moment.utc(registro.data_termino).format('DD/MM/YYYY')}</td>
                                         <td> {registro.descricao}</td>
                                     </tr>
                                 )
