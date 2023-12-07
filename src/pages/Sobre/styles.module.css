@@ -1,0 +1,35 @@
+/*Style Evento Principal */
+.caixa_lista {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 75vh;
+    width: 74vw;
+}
+
+.caixa_terciaria {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 90%;
+    text-align: justify;
+}
+
+
+@media (max-width: 426px) {
+    .caixa_lista {
+        height: 130vh;
+        width: 100vw;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 15px;
+    }
+
+    .caixa_terciaria {
+        width: 100vw; 
+    }
+
+}

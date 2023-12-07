@@ -30,7 +30,7 @@ export default function BarraLateral() {
               <Link to='/inicio/Eventos_Opcoes'> <Button variant="outline-light" className={`${styles.botao}`} size="lg">Eventos</Button> </Link>
             </Scroll>
             <Link to='/'> <Button variant="outline-light" className={`${styles.botao}`} size="lg">Deslogar</Button> </Link>
-            <Link to='#'> <Button variant="outline-light" className={`${styles.botao}`} size="lg">Sobre</Button> </Link>
+            <Link to='/inicio/sobre'> <Button variant="outline-light" className={`${styles.botao}`} size="lg">Sobre</Button> </Link>
           </div>
         </Col>
         {/* SEGUNDA COLUNA DA BARRA LATERAL, LOCAL ONDE É RENDERIZADO OS COMPONENTES */}

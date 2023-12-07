@@ -27,6 +27,7 @@ import ConfirmarUsuario from './pages/Usuarios/confirmar_usuario';
 import InscricaoParticipante from './pages/Usuarios/inscricao_participante.jsx';
 import ConfirmacaoParticipacao from './pages/Usuarios/confirmacao_participacao.jsx';
 
+import SobreInicio from './pages/Sobre/index.jsx'
 
 // CONJUNTO DE ROTAS DO SITE
 const rotas = createBrowserRouter([
@@ -100,6 +101,10 @@ const rotas = createBrowserRouter([
   {
     path: "/inicio/confirmacao_participante",
     element: < ConfirmacaoParticipacao />
+  },
+  {
+    path: "/inicio/sobre",
+    element: <SobreInicio />
   }
 
 ])
