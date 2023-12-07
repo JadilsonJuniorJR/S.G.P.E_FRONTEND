@@ -3,7 +3,7 @@ import React from "react";
 import { Container, Row } from "react-bootstrap";
 
 // IMPORTANDO ESTILO
-import styles from "./styles.module.css";
+import styles from "./estilo.module.css";
 
 import icone_confirmado from '../../assets/sinal-de-visto.png'
 
