@@ -37,7 +37,7 @@ export default function Evento_Registro() {
             </Row>
             <Row >
                 <Container className={styles.tabela}>
-                    <Table responsive="sm" striped bordered hover variant="dark">
+                    <Table responsive="sm" striped bordered hover variant="dark" rounded >
                         <thead>
                             <tr>
                                 <th>ID</th>
