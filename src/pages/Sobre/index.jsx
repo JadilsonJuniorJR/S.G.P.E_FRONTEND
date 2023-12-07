@@ -1,6 +1,6 @@
 // IMPORTANDO BIBLIOTECAS
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 
 // IMPORTANDO ESTILO
 import styles from "./styles.module.css";
