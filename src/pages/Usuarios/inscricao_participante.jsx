@@ -46,7 +46,7 @@ export default function Inscricao_Participante() {
         })
             .then(response => {
                 console.log(response.status + " Usuario enviado")
-                setTimeout(() => { return navigate("/tela_confirmacao") }, 2000)
+                setTimeout(() => { return navigate("/confirmacao_registro") }, 2000)
             })
             .catch((err) => {
                 // toast({error: 'Cadastro não Registrado !'})

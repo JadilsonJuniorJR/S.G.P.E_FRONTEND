@@ -41,7 +41,7 @@ export default function Confirmacao_Participacao() {
             console.log(response)
             console.log(response.status + " Usuario enviado")
             // notify()
-            setTimeout(() => { return navigate("/inicio") }, 2000)
+            setTimeout(() => { return navigate("/confirmacao_presenca") }, 2000)
         })
             .catch((err) => {
                 console.error("ops! ocorreu um erro na requisição" + err);
