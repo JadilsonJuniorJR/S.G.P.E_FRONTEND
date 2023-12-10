@@ -30,7 +30,8 @@ export default function Confirmacao_Participacao() {
 
     const PutData = async (dados) => {
         await toast.promise(
-            axiosInstance.put(`/participante/confirmar/${dados.nome_user}/${dados.matricula}`),
+            // axiosInstance.put(`/participante/confirmar/${dados.nome_user}/${dados.matricula}`),
+            axiosInstance.put(`/participante/confirmar/${dados.matricula}`),
             {
                 pending: 'Enviando ....',
                 success: 'Saida Registrado !',
@@ -61,14 +62,14 @@ export default function Confirmacao_Participacao() {
                     <h2 className="mt-5 mb-5" >Formulário de Confirmação </h2>
                     <Container fluid className={` ${styles.caixa_interna_2_participacao} ${' p-4 bg-dark rounded'}`}>
                         <Form onSubmit={handleSubmit(PutData)} className="overflow-hidden">
-                            <Row>
+                            {/* <Row>
                                 <Form.Group className="mb-3" controlId="nome_user">
                                     <Form.Label>Nome: </Form.Label>
                                     <Form.Control as='input' type="text" placeholder="Digite o seu nome:"
                                         {...register('nome_user')}
                                     />
                                 </Form.Group>
-                            </Row>
+                            </Row> */}
 
                             <Row>
                                 <Form.Group className="mb-3" controlId="matricula_user">
