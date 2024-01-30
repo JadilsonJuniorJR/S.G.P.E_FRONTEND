@@ -1,4 +1,4 @@
-# **SISTEMA DE GERENCIAMENTO DE PRESENÇA EM EVENTOS - BACKEND**
+# **SISTEMA DE GERENCIAMENTO DE PRESENÇA EM EVENTOS - FRONTEND**
 ## *No âmbito do Instituto Federal de Brasília*
 ## **Problemática do Projeto** 
 
