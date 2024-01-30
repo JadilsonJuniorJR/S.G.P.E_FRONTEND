@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# **SISTEMA DE GERENCIAMENTO DE PRESENÇA EM EVENTOS - BACKEND**
+## *No âmbito do Instituto Federal de Brasília*
+## **Problemática do Projeto** 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+O Instituto Federal de Brasília (IFB) - Campus Brasília realiza eventos acadêmicos regularmente, no qual recebe um grande número de inscrições entre estudantes da comunidade interna e externa à instituição. Muitos desses eventos acontecem durante o período letivo, de maneira que os docentes do Instituto utilizam a participação do aluno em eventos como uma forma de complemento de conteúdo referente ao plano de ensino da disciplina lecionada. Por não existir um padrão no gerenciamento desses dados, cada docente cria sua própria maneira para registrar a presença do aluno. Podendo ser elas: a utilização de formulários da plataforma do Google, a assinatura de uma ata em sala de aula antes do evento acontecer, dentre outras. 
+De maneira geral as soluções utilizadas demandam do mesmo problema:
+- A real participação do estudante no evento: O próprio estudante pode simplesmente confirmar sua presença no evento, mas não ter realmente participado.
+- Entrega do Certificado de participação: Muitos eventos fazem a entrega do certificado mediante a inscrição do estudante, sem ter uma verificação da real presença, ocasionando a entrega indevida do mesmo.
+- Confiabilidade: A verificação de presenças gera um atraso na confirmação destas, pois exige do docente a execução de uma filtragem dos dados da lista recebida, além da falta de confiabilidade das informações da lista, no qual a assinatura de um participante ausente poderá ser escrito, por exemplo, por outro aluno.
 
-## Available Scripts
+## Tecnologias Utilizadas ##
+- HTML/CSS
+- React
 
-In the project directory, you can run:
+## Bibliotecas Utilizadas ##
+- react-bootstrap
+- react-toastify
+- axios
+- react-date-picker
+- react-router-dom
+- react-hook-form...
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Implantação em produção ##
+- Frontend: Netlifly
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Execução do Projeto #
+Para utilização dessa API segue os passos: 
+```
+#Clonar o repositorio ou realizar o download da pasta: 
+git clone https://github.com/JadilsonJuniorJR/S.G.P.E_FRONTEND.git
 
-### `npm test`
+#Entrar na pasta
+cd  .\S.G.P.E_FRONTEND-master\
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#Instalar o projeto
+npm install
 
-### `npm run build`
+#Executar o projeto
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Visão da Solução Implementada ##
+### Diagrama de Caso de Uso ###
+O diagrama de caso de uso utiliza a estrutura do UML para demonstrar as interações e funcionalidades que o usuário dispõe no sistema.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![image](https://github.com/JadilsonJuniorJR/S.G.P.E_FRONTEND/assets/104590503/9b4cc052-0cc4-47da-ab8d-956e8ec40321)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Tela Principal do Sistema ##
+![image 4](https://github.com/JadilsonJuniorJR/S.G.P.E_FRONTEND/assets/104590503/6c022181-7668-4a94-95fb-61a06b7e1d44)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
